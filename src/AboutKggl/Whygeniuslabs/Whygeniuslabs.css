@@ -1,0 +1,50 @@
+
+.htext{
+    color: #291571;
+}
+.expcard{
+   
+    color: #291571 !important;
+    background-color: white;
+    box-shadow: 1px 1px 10px 2px #afa0e4; 
+}
+.inovcard{
+    background-color: #291571 !important;
+    color: white !important;
+}
+.inovcard,.expcard{
+    width: 100%;
+    max-width: 150px; /* Limit the maximum width of the card */
+    height: 180px; /* Ensure the card is square */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px auto; 
+    /* padding: 10px;  */
+    transition: transform 0.3s; 
+  }
+  
+  .inovcard:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  .expcard:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  .iconimg {
+    width: 50px; /* Adjust the size of the icon */
+    height: 50px;
+    margin-bottom: 10px; /* Space between the icon and text */
+  }
+  
+  /* Ensure responsiveness of the card */
+  @media (max-width: 576px) {
+    .inovcard {
+      max-width: 120px; /* Adjust size for smaller screens */
+      height: 120px;
+    }
+  }
+  

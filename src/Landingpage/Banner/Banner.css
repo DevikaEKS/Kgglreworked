@@ -1,0 +1,197 @@
+.carousel-caption-centered {
+  position: absolute;
+  top: 40%; /* Center vertically */
+  left: 0% !important; /* Align text to the left edge */
+  transform: translateY(-50%); /* Adjust vertical centering */
+  text-align: left !important;
+  background-color: transparent; /* Optional: Add a semi-transparent background */
+  padding-left: 20px; /* Optional: Add padding from the left edge */
+  max-width: 800px; /* Optional: Limit the width of the text container */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.itheading {
+  background-image: linear-gradient(#291571, #4E28D7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 68px;
+}
+
+.itsmallheading {
+  font-size: 18px;
+}
+
+.itpara {
+  color: #291571;
+  font-size: 24px;
+  padding: 3px 0px;
+}
+.bannerkg{
+  background-image: linear-gradient(to right,#291571, #C81B33,#DA1B2B,#ED1C24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 48px;
+}
+
+.btnshading{
+  background-image: linear-gradient(#291571,#4E28D7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 24px;
+  font-weight: 500;
+  border: 0;
+  box-shadow: 1px 1px 5px 1px #b7b1cd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+.btnshading1{
+  background-image: linear-gradient(to right,#291571,#4E28D7);
+ color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border: 0;
+  box-shadow: 1px 1px 5px 1px #b7b1cd;
+  border-radius: 5px;
+  padding: 10px;
+}
+.withtext{
+  font-size: 51px;
+}
+/* //sap */
+.sapbutton{
+  background-image: linear-gradient(to right,#291571,#4E28D7);
+  color: #fff;
+  border: 0;
+  font-size: 24px;
+  font-weight: 500;
+  border: 0;
+  box-shadow: 1px 1px 5px 1px #b7b1cd;
+  border-radius: 5px;
+  
+}
+.btnshading{ 
+  color: transparent;
+  font-size: 20px;
+  font-weight: 400;
+  border: 0;
+  box-shadow: 1px 1px 5px 1px #b7b1cd;
+  border-radius: 5px;
+}
+.itheading{
+  background-image: linear-gradient(#291571, #4E28D7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 68px; 
+}
+.sapheading{
+  background-image: linear-gradient(#291571, #4E28D7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 68px; 
+}
+.dmheading{
+  background-image: linear-gradient(#291571, #4E28D7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 58px;
+}
+
+@media (max-width:425px){
+  .carousel-caption-centered {
+    position: absolute;
+    top: 25%;
+    left: 0% !important; 
+    transform: translateY(-50%); 
+    text-align: left !important;
+    background-color: transparent;
+    padding-left: 10px; 
+    max-width: 250px !important; 
+  }
+  .btnshading{
+    font-size: 10px;
+    font-weight: 400;
+    border: 0;
+    margin-bottom: 50px !important;
+  }
+  .btnshading1{
+    font-size: 10px;
+    font-weight: 400;
+    border: 0;
+    margin-bottom: 50px !important;
+  }
+  .bannerkg{
+    font-size: 18px;
+  }
+  .itheading {
+    font-size: 18px;
+  }
+  .sapheading{
+    font-size: 18px;
+  }
+  .dmheading{
+    font-size: 18px;
+  }
+  .withtext{
+    font-size:16px;
+  }
+  .itpara {
+    font-size: 10px;
+  }
+}
+
+@media (min-width:426px) and (max-width:768px){
+  .carousel-caption-centered {
+    position: absolute;
+    top: 25%;
+    left: 0% !important; 
+    transform: translateY(-50%); 
+    text-align: left !important;
+    background-color: transparent;
+    padding-left: 10px; 
+    max-width: 250px !important; 
+  }
+  .btnshading{
+    font-size: 10px;
+    font-weight: 400;
+    border: 0;
+    margin-bottom: 50px !important;
+  }
+  .btnshading1{
+    font-size: 10px;
+    font-weight: 400;
+    border: 0;
+    margin-bottom: 50px !important;
+  }
+  .bannerkg{
+    font-size: 16px;
+  }
+  .itheading {
+    font-size: 16px;
+  }
+  .sapheading{
+    font-size: 16px;
+  }
+  .dmheading{
+    font-size: 16px;
+  }
+  .withtext{
+    font-size:12px;
+  }
+  .itpara {
+    font-size: 10px;
+  }
+}
+
