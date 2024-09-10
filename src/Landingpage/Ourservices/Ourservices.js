@@ -1,27 +1,4 @@
-// import React from 'react'
-// import "./Ourservices.css";
-// import SwiperCard3D from '../Swipingcard/Swipingcard';
 
-// function Ourservices() {
-//   return (
-//     <div className='container servicesbg'>
-//         <div className='row'>
-//             <div className='col-sm-12 col-lg-5'>
-//                 <h1 className='serviceheading'>-Our <span className='sapborder-text'>Services</span> </h1>
-//                 <h4 className='saptext'>SAP</h4>
-//             </div>
-//             <div className='col-sm-12 col-lg-7'>
-
-// <SwiperCard3D/>
-
-
-//             </div>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default Ourservices
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -42,7 +19,7 @@ function Ourservices() {
   }, []);
 
   return (
-    <div className='container servicesbg'>
+    <div className='container servicesbg my-5 pt-5'>
       <div className='row'>
         <div className='col-sm-12 col-lg-5'>
           <h1 className='serviceheading'>

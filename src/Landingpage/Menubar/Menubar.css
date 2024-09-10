@@ -28,6 +28,9 @@ background-color: rgba(255, 255, 255, 0.4);
     position: relative; /* Needed for absolute positioning of the pseudo-element */
     overflow: hidden; /* Ensures pseudo-element does not overflow */
   }
+  @media (min-width:768px){
+
+ 
   .navtext::after {
     content: "";
     position: absolute;
@@ -41,6 +44,7 @@ background-color: rgba(255, 255, 255, 0.4);
     transition: transform 0.3s ease; 
     border-radius: 3px 3px 0px 0px;
   }
+}
   
   .navtext:hover::after {
     transform: scaleX(1);

@@ -1,4 +1,4 @@
-.visionheading {
+/* .visionheading {
     color: #291571; 
     font-size: 24px;
     font-weight: 700 !important;
@@ -25,10 +25,14 @@
     max-height: 250px;
 }
 
-/* Mission.css */
+
+.visionpara{
+  text-align: justify;
+  color: #291571;
+}
 
 .visionheading {
-    font-size: 1.75rem; /* Adjust size as needed */
+    font-size: 1.75rem; 
     margin-bottom: 1rem;
   }
   
@@ -39,6 +43,68 @@
   
   @media (max-width: 767.98px) {
     .firstcol {
+      text-align: center;
+    }
+    .vtext{
+      width:300px
+    }
+  }
+   */
+
+
+
+   .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .heading-with-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .section-heading {
+    font-size: 24px;
+    font-family: 'Proxima Nova', sans-serif;
+    color: #291571;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+  .vtext{
+    width: 300px !important;
+    background-color: #291571;
+  }
+  .section-para {
+    font-size: 16px;
+    color: #291571;
+    line-height: 1.6;
+    max-width: 450px;
+  }
+  
+  .section-image {
+    max-width: 200px;
+    border-radius: 8px;
+  }
+  
+  .decorative-icon {
+    width: 30px;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .heading-with-icon {
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    .section-heading {
+      font-size: 20px;
+    }
+    .section-image {
+      max-width: 150px;
+      margin: 0 auto 20px;
+    }
+    .section-para {
       text-align: center;
     }
   }

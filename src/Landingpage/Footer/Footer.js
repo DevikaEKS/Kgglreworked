@@ -11,7 +11,7 @@ function Footer() {
 
       <div className='row'>
         <div className='col'>
-          <h4>Quick View</h4>
+          <h4>Quick Links</h4>
           <p>Home</p>
           <p>About Us</p>
           <p>Services</p>

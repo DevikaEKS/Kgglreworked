@@ -1,9 +1,27 @@
-.blogheading{
+
+.blogheading {
+    position: relative; 
+    display: inline-block; 
+    font-size: 48px; 
+    font-family: 'Proxima Nova', sans-serif;
     color: #291571;
     font-weight: 600;
-    font-size: 48px;
-    font-family: 'Proxima Nova', sans-serif !important;
 }
+
+.blogheading::after {
+    content: '';
+    display: block;
+    width: 10% !important; 
+    height: 5px; 
+    background-image: linear-gradient(to right, #ED1C24, #871015); 
+    margin: 0 auto; 
+    position: absolute;
+    left: 50%; 
+    border-radius: 10px;
+    bottom: -5px; 
+    transform: translateX(-50%);
+}
+
 .colourcard{
     background-image: linear-gradient(to top,#291571,#4e28d7);
     color: #fff;
