@@ -49,11 +49,19 @@ function AboutKggl() {
           
           {/* Second row with "We are" text and image responsive */}
           <div className='col-12 d-flex align-items-center justify-content-center my-5 flex-wrap'> 
-            <img src={ab2} className='imab1 img-fluid mx-3' alt='Who We Are'/>
+            <div className='order-2 order-md-1'>
+            <img src={ab2} className='imab1 img-fluid mx-3' alt='Who We Are' />
+            </div>
+            <div className='order-1 order-md-2'>
             <h1 className='abhead'>We are</h1>
+            </div>
           </div>
+          
+
+
+
           </div>
-          <div className='row'>
+          <div className='row mt-5'>
             <p>With a rich legacy spanning decades, The KG Group has been at the forefront of innovative technologies. KGiSL, which introduced pioneering tech solutions in South India 25 years ago, has now evolved into a rapidly expanding IT company across the Indo-Pacific, operating in over 7 countries.</p>      
             <p>KG Genius Labs, the newest venture from KG, delivers tailored solutions to global businesses, including SAP IT Infrastructure Management, LMS, CRM, Custom Application Development, and Digital Marketing Services. We are the preferred partner for forward-thinking business collaborations.</p>
           </div>

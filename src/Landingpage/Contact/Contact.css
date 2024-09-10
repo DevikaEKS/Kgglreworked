@@ -1,20 +1,22 @@
 input,textarea{
     border: 1px solid #291571 !important;
 }
+.ccode{
+  width: 10px !important;
+}
 .contacttext{
     color: #291571;   
 }
 .contactpara{
     font-size: 18px;
+    padding: 0px 0px;
 }
 .contactheading{
     font-size: 48px;
     font-weight: 600 !important;
-    font-family: 'Proxima Nova', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;  
 }
-.contactpart{
-    padding: 0px 0px;
-}
+
 .contactbtn{
     background-image: linear-gradient(to left,#4E28D7,#291571);
     color: white;

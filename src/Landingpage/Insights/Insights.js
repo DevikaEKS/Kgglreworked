@@ -16,7 +16,7 @@ function Insights() {
               <p className="card-text">
                 This is a paragraph of text inside the card. It provides some information about the content of the card.
               </p>
-              <a href="#" className="btn btn-primary">
+              <a href="#" className="border border-2 rounded-5 p-2 text-light text-decoration-none m-1">
                 Read More
               </a>
             </div>
@@ -30,7 +30,9 @@ function Insights() {
               <p className="card-text">
                 This is a paragraph of text inside the card. It provides some information about the content of the card.
               </p>
-              <a href="#" className="btn btn-primary"> Read More</a>
+              <a href="#" className="border border-2 rounded-5 p-2 text-light text-decoration-none m-1">
+                Read More
+              </a>
             </div>
           </div>
           
@@ -43,7 +45,9 @@ function Insights() {
               <p className="card-text">
                 This is a paragraph of text inside the card. It provides some information about the content of the card.
               </p>
-              <a href="#" className="btn btn-primary">Read More</a>
+              <a href="#" className="border border-2 rounded-5 p-2 text-light text-decoration-none m-1">
+                Read More
+              </a>
             </div>
           </div>
         </div>

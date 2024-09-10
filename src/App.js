@@ -19,7 +19,9 @@ import Aboutpagehr from './HRRecruitment/Recruitment/Aboutpage/Aboutpage';
 import Sectors from './HRRecruitment/Recruitment/Sectors/Sectors';
 import Clientpage from './HRRecruitment/Recruitment/Clientpage/Clientpage';
 import Corevalues from './HRRecruitment/Recruitment/Corevalues/Corevalues';
-import Evolution from './Aboutsection/Evolution/Evolution';
+import {Evolution} from './Aboutsection/Evolution/Evolution';
+import Blogpreview from './Blogs/Blogpreview/Blogpreview';
+
 
 
 function App() {
@@ -32,7 +34,7 @@ function App() {
         <Route path='/d' element={<SwiperCard3D/>}/>
         {/* <Route path="/hr" element={[<Banner/>,<Aboutpage/>,<Teamfeatures/>,<Sectors/>,<Clientpage/>,<Corevalues/>]}/> */}
         <Route path='/hr' element={[<Menubar/>,<Bannerhr/>,<Aboutpagehr/>,<Teamfeatures/>,<Sectors/>,<Clientpage/>,<Corevalues/>,<Footercard/>,<Footer/>]}/>
-      
+      <Route path='/blog' element={<Blogpreview/>}/>
       </Routes>      
       </BrowserRouter>
      

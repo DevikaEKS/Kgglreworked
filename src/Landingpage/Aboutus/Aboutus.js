@@ -7,7 +7,7 @@ function Aboutus() {
   return (
     <div className='container textclr'>
         <div className='row abpart'>
-            <div className='col-sm-12 col-lg-6 textclr about-title'>
+            <div className='col-sm-12 col-md-6 textclr about-title'>
             <div className='aboutpart'>
             <p className='my-5 aboutheading'>About Us</p> 
             <p className='abouttext'>With a rich legacy spanning decades, The KG Group has been at the forefront of innovative technologies. KGiSL, which introduced pioneering tech solutions in South India 25 years ago, has now evolved into a rapidly expanding IT company across the Indo-Pacific, operating in over 7 countries. </p>
@@ -15,7 +15,7 @@ function Aboutus() {
             <div className='knowmore text-end'><Link to="/aboutus">Know More</Link></div>
             </div>
             </div>
-            <div className='col-sm-12 col-lg-5 pt-5'>
+            <div className='col-sm-12 col-md-5 pt-5'>
             <img src={img1} alt='about us' className='aboutimg'/>
             </div>
         </div>

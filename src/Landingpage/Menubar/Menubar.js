@@ -90,7 +90,6 @@ import "./Menubar.css";
 
 function Menubar() {
   const [expanded, setExpanded] = useState(false); // State to control the navbar expansion
-
   const handleToggle = () => setExpanded(!expanded); // Toggle navbar expansion
   const handleSelect = () => setExpanded(false); // Collapse navbar on menu item click
 
@@ -105,11 +104,11 @@ function Menubar() {
             <Nav.Link as={Link} to="/aboutus" className='navtext px-3'>About Us</Nav.Link>
             <NavDropdown title={<span className='navtext px-3'>Our Services</span>} id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/hr" className='navtext1'>HR</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/it" className='navtext1 px-3'>IT</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/digital-marketing" className='navtext1'>Digital Marketing</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/sap" className='navtext1'>SAP</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/it" className='navtext1 px-3' disabled>IT</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/digital-marketing" className='navtext1' disabled>Digital Marketing</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/sap" className='navtext1' disabled>SAP</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/blogs" className='navtext px-3'>Blogs</Nav.Link>
+            <Nav.Link as={Link} to="/blog" className='navtext px-3'>Blogs</Nav.Link>
           </Nav>
           <Nav className='ms-auto'>
             <Nav.Link as={Link} to="/contact" className='contactbutton px-3 rounded-1'>Contact Us</Nav.Link>

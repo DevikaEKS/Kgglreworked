@@ -28,6 +28,10 @@ background-color: rgba(255, 255, 255, 0.4);
     position: relative; /* Needed for absolute positioning of the pseudo-element */
     overflow: hidden; /* Ensures pseudo-element does not overflow */
   }
+
+  .navtext1:hover{
+    background-color: white;
+  }
   @media (min-width:768px){
 
  
@@ -56,6 +60,12 @@ background-color: rgba(255, 255, 255, 0.4);
   color: #fff !important;
   font-size: 24px !important;
  }
+
+ .navtext1:disabled {
+  color: #6c757d; /* Gray color for disabled item */
+  pointer-events: none; /* Prevents click actions */
+  opacity: 0.6; /* Makes it semi-transparent */
+}
   
   
   

@@ -109,6 +109,8 @@
   font-size: 58px;
 }
 
+
+
 @media (max-width:425px){
   .carousel-caption-centered {
     position: absolute;

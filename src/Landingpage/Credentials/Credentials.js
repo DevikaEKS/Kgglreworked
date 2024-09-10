@@ -12,7 +12,7 @@ function Credentials() {
           <div className='col-lg-4'>
             <div className='card cred m-3 mt-5 yeartext1'>
               <h1>7+</h1>
-              <h2>Countries</h2>
+              <h2 className='txtrte'>Countries</h2>
             </div>
             <div className='card cred profcard border-0 rounded-4'>
               <h1>500+</h1>
@@ -20,7 +20,7 @@ function Credentials() {
             </div>
           </div>
           <div className='col-lg-4'>
-            <div className='card cred p-5 my-5 yeartext rounded-5 mb-5 rounded-4'>
+            <div className='card cred p-5  yeartext rounded-5 m-2 rounded-4'>
               <h1>25+</h1>
               <h2>Years Legacy</h2>
             </div>
