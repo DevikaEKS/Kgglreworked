@@ -23,8 +23,9 @@
 
 .aboutheading {
     color: #291571; 
-    font-size: 22px !important;
-    font-weight: 700 !important;
+    font-size: 48px !important;
+    font-weight: 400 !important;
+    font-family: 'Proxima Nova', sans-serif;
     position: relative;
     padding-left: 45px;
     margin-bottom: 30px;
@@ -49,7 +50,7 @@
         width: 320px;
     }
     .aboutheading {
-        font-size: 18px;
+        font-size: 24px !important;
     }
     .abouttext{
         font-size: 16px;

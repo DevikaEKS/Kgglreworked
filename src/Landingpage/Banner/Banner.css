@@ -1,7 +1,7 @@
 .carousel-caption-centered {
   position: absolute;
   top: 40%; /* Center vertically */
-  left: 0% !important; /* Align text to the left edge */
+  left: 3% !important; /* Align text to the left edge */
   transform: translateY(-50%); /* Adjust vertical centering */
   text-align: left !important;
   background-color: transparent; /* Optional: Add a semi-transparent background */
@@ -39,6 +39,20 @@
   color: transparent;
   font-size: 48px;
 }
+.bannerkgdm{
+  background-image: linear-gradient(to right,#291571, #C81B33,#DA1B2B,#ED1C24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 58px;
+}
+.bannerkg1{
+  background-image: linear-gradient(to right,#291571, #C81B33,#DA1B2B,#ED1C24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 68px;
+}
 
 .btnshading{
   background-image: linear-gradient(to right,#291571,#4E28D7) !important;
@@ -50,7 +64,7 @@
   border: 0;
   box-shadow: 1px 1px 5px 1px #b7b1cd;
   border-radius: 5px;
-  padding: 10px;
+  padding: 15px;
 }
 
 
@@ -62,12 +76,9 @@
   border: 0;
   box-shadow: 1px 1px 5px 1px #b7b1cd;
   border-radius: 5px;
-  padding: 10px;
+  padding: 15px;
 }
-.withtext{
-  font-size: 51px;
-}
-/* //sap */
+
 .sapbutton{
   background-image: linear-gradient(to right,#291571,#4E28D7);
   color: #fff;
@@ -111,7 +122,7 @@
 
 
 
-@media (max-width:425px){
+@media (max-width:426px){
   .carousel-caption-centered {
     position: absolute;
     top: 25%;
@@ -123,20 +134,26 @@
     max-width: 250px !important; 
   }
   .btnshading{
-    font-size: 10px;
+    font-size: 10px !important;
     font-weight: 400;
     border: 0;
     margin-bottom: 50px !important;
+    padding: 5px !important;
+  }
+  .itpara{
+    padding-bottom: 0.1rem !important;
   }
   .btnshading1{
     font-size: 10px;
     font-weight: 400;
     border: 0;
     margin-bottom: 50px !important;
+    padding: 5px;
   }
-  .bannerkg{
+  .bannerkg,.bannerkg1,.bannerkgdm{
     font-size: 18px;
   }
+ 
   .itheading {
     font-size: 18px;
   }
@@ -144,7 +161,7 @@
     font-size: 18px;
   }
   .dmheading{
-    font-size: 18px;
+    font-size: 16px;
   }
   .withtext{
     font-size:16px;
@@ -154,46 +171,48 @@
   }
 }
 
-@media (min-width:426px) and (max-width:768px){
+@media (min-width:427px) and (max-width:769px){
   .carousel-caption-centered {
     position: absolute;
-    top: 25%;
-    left: 0% !important; 
+    top: 45%;
+    left: 3% !important; 
     transform: translateY(-50%); 
     text-align: left !important;
     background-color: transparent;
     padding-left: 10px; 
-    max-width: 250px !important; 
+    max-width: 350px !important; 
   }
   .btnshading{
-    font-size: 10px;
+    font-size: 12px !important;
     font-weight: 400;
     border: 0;
+    padding: 15px;
     margin-bottom: 50px !important;
   }
   .btnshading1{
     font-size: 10px;
     font-weight: 400;
     border: 0;
+    font-size: 10px !important;
     margin-bottom: 50px !important;
   }
-  .bannerkg{
-    font-size: 16px;
+  .bannerkg,.bannerkg1,.bannerkgdm{
+    font-size: 24px;
   }
   .itheading {
-    font-size: 16px;
+    font-size: 30px;
   }
   .sapheading{
-    font-size: 16px;
+    font-size: 30px;
   }
   .dmheading{
-    font-size: 16px;
+    font-size: 30px;
   }
   .withtext{
     font-size:12px;
   }
   .itpara {
-    font-size: 10px;
+    font-size: 16px;
   }
 }
 

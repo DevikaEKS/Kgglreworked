@@ -5,7 +5,7 @@ import { faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-
 
 function Footercard() {
   return (
-    <div className='container-fluid bgclr mt-5 py-3'>
+    <div className='container-fluid bgclrfooter mt-5 py-3'>
     <div className='card container footer-wrapper rounded-0 px-4'>
       <div className='row justify-content-center text-center'>
         <div className='col-12 col-lg-4 d-flex flex-column align-items-center mb-3'>

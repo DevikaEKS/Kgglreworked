@@ -7,10 +7,7 @@
     color: #291571;
     font-size: 18px;
 }
-.imab1{
-    height: 100px;
-    width: 300px !important;
-}
+
 .intended{
 text-indent: 28px;
 }
@@ -20,9 +17,17 @@ text-indent: 28px;
     -webkit-background-clip: text; /* Clip the background to the text */
     -webkit-text-fill-color: transparent; /* Make the text color transparent to show the gradient */
 }
+
 @media (max-width:768px){
-.contentparts{
-    padding: 0px 40px;
-}
+    .abhead {
+        font-size: 64px;
+        background-image: linear-gradient(#291571, #4E28D7); /* Gradient colors */
+        -webkit-background-clip: text; /* Clip the background to the text */
+        -webkit-text-fill-color: transparent; /* Make the text color transparent to show the gradient */
+    } 
+    .paragl{
+        text-align: justify;
+       
+    }  
 }
 

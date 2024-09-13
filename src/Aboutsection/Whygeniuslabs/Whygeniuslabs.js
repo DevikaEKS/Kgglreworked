@@ -76,8 +76,8 @@ import "./Whygeniuslabs.css";
 function Whygeniuslabs() {
   return (
     <div className='container py-5 text-center'>
-      <h1 className='htext blogheading'>Why KG Genius Labs?</h1>
-      <div className='row justify-content-center py-3'>
+      <h1 className='evolheading'><b>Why KG Genius Labs?</b></h1>
+      <div className='row justify-content-center py-3 mx-5'>
 
         <div className='col-sm-6 col-md-4 '>
           <div className='card expcard py-5 my-4'>

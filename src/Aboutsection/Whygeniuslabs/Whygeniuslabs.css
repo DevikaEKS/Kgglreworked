@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px; 
+    border-radius: 25px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px auto; 
     /* padding: 10px;  */
@@ -57,4 +57,19 @@
       border: 0 !important;
     }
   }
+
+  @media (min-width: 768px) {
+    .inovcard {
+      max-width: 300px; /* Adjust size for smaller screens */
+      height: 300px;
+      border: 0 !important;
+    }
+    .expcard {
+      max-width: 300px; /* Adjust size for smaller screens */
+      height: 300px;
+      border: 0 !important;
+    }
+  }
+
+
   

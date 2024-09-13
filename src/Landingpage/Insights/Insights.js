@@ -7,7 +7,7 @@ function Insights() {
   return (
     <div className='container-fluid'>
       <div className='row  my-5 pb-5 insightspart'>
-        <h1 className='text-center blogheading mb-5'>Additional Insights</h1>
+        <h1 className='text-center evolheading mb-5'><b>Additional Insights</b></h1>
         <div className='col-sm-12 col-lg-4'>
           <div className="card colourcard text-light my-3">
             <img src={cardim1} alt="Card image" className="card-img-top" />

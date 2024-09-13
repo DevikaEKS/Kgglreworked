@@ -1,11 +1,11 @@
 import React from "react";   
 import evolution from '../../Asset/WhatsApp Image 2024-03-20 at 3.11.54 PM.2cf0e3e7554845827add 1.png';
+import "./Evolution.css";
 export function Evolution(){
     return(
         <>
         <div className="text-center">
-            <h3 className="mb-5 blogheading"><b>Our Evolution </b></h3>
-          
+            <h3 className="mb-5 evolheading"><b>Our Evolution </b></h3>
                 <img src={evolution} usemap="#image-map" className="container-fluid"/>
                 <map name="image-map">
                     <area target="_blank" alt="" title="" href="https://www.kgworldwide.com/" coords="689,119,54" shape="circle"/>

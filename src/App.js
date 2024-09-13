@@ -21,20 +21,28 @@ import Clientpage from './HRRecruitment/Recruitment/Clientpage/Clientpage';
 import Corevalues from './HRRecruitment/Recruitment/Corevalues/Corevalues';
 import {Evolution} from './Aboutsection/Evolution/Evolution';
 import Blogpreview from './Blogs/Blogpreview/Blogpreview';
-
-
+import Discover from './HRRecruitment/Discover/Discover';
+import Hrfootercard from './HRRecruitment/Hrfootercard/Hrfootercard';
+import Sapbanner from './Sap/Sapbanner/Sapbanner';
+import Sapsupport from './Sap/Sapsupport/Sapsupport';
+import Analysis from './Sap/Analysis/Analysis';
+import Valueadded from './Sap/Valueadded/Valueadded';
+import Sapimplementation from './Sap/Sapimplementation/Sapimplementation';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={[<Menubar/>,<Banner/>,<Aboutus/>,<Ourservices/>,<Credentials/>,<Insights/>, <Contact/>, <Footercard/>,<Footer/>]}/>
-       <Route path='/aboutus' element={[<Menubar/>,<AboutKggl/>,<Mission/>,<Evolution/>,<Whygeniuslabs/>,<Footercard/>,<Footer/>]}/> 
-        <Route path='/d' element={<SwiperCard3D/>}/>
-        {/* <Route path="/hr" element={[<Banner/>,<Aboutpage/>,<Teamfeatures/>,<Sectors/>,<Clientpage/>,<Corevalues/>]}/> */}
-        <Route path='/hr' element={[<Menubar/>,<Bannerhr/>,<Aboutpagehr/>,<Teamfeatures/>,<Sectors/>,<Clientpage/>,<Corevalues/>,<Footercard/>,<Footer/>]}/>
-      <Route path='/blog' element={<Blogpreview/>}/>
+      <Route path='/' element={[<Menubar/>,<Banner/>,<Aboutus/>,<Ourservices/>,<Credentials/>,<Insights/>, <Contact/>, <Footercard/>,<Footer/>]}/>
+      <Route path='/aboutus' element={[<Menubar/>,<AboutKggl/>,<Evolution/>,<Mission/>,<Whygeniuslabs/>,<Footercard/>,<Footer/>]}/> 
+      <Route path='/d' element={<SwiperCard3D/>}/>
+      <Route path='/hr' element={[<Menubar/>,<Bannerhr/>,<Aboutpagehr/>,<Teamfeatures/>,<Sectors/>,<Clientpage/>,<Corevalues/>,,<Discover/>,<Hrfootercard/>,<Footer/>]}/>
+      <Route path='/blog' element={[<Menubar/>,<Blogpreview/>]}/>
+      <Route path='/sap' element={[<Sapbanner/>,<Sapsupport/>,<Footercard/>,<Footer/>]}/>
+      <Route path='/analyse' element={[<Sapbanner/>,<Analysis/>]}/>
+      <Route path='/valueadded' element={[<Sapbanner/>,<Valueadded/>,<Footercard/>,<Footer/>]}/>
+      <Route path='/imp' element={<Sapimplementation/>}  />
       </Routes>      
       </BrowserRouter>
      

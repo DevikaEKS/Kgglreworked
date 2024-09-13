@@ -11,7 +11,7 @@ import cardim3 from "../../Asset/socialmedia.jpg";
 import cardim4 from "../../Asset/hr.jpg";
 import "./Swipingcard.css";
 
-// Import Swiper core and required modules
+
 import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules';
 
 function SwiperCard3D() {
@@ -27,20 +27,20 @@ function SwiperCard3D() {
             slidesPerView="2"
             loop={true} 
             coverflowEffect={{
-              rotate: 0, // Set rotate to 0 to keep cards facing forward
-              stretch: 50, // Adjust stretch for overlap effect
-              depth: 200, // Increase depth for a more pronounced 3D effect
-              modifier: 2, // Adjust modifier to control 3D intensity
-              slideShadows: false, // Disable slide shadows for a clean look
+              rotate: 0, 
+              stretch: 50, 
+              depth: 200, 
+              modifier: 2, 
+              slideShadows: false,
             }}
             autoplay={{
-              delay: 1000, // Delay between slides in ms
-              disableOnInteraction: false, // Continue autoplay after interaction
+              delay: 5000, 
+              disableOnInteraction: false, 
             }}
             pagination={{ clickable: true }}
             className='mySwiper'
           >
-            {/* Swiper Slides */}
+           
             <SwiperSlide>
               <div className="card mx-3" style={{ width: '300px'}}>
                 <img src={cardim1} alt="Sample Image" className="card-img-top" />
@@ -78,7 +78,7 @@ function SwiperCard3D() {
               </div>
             </SwiperSlide>
            
-            {/* Add more SwiperSlide components as needed */}
+            
           </Swiper>
       
       </div>

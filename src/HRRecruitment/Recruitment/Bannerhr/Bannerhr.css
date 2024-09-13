@@ -25,13 +25,13 @@
 
 
 
-  @media (max-width:768px){
+  @media (max-width:769px){
     .bannerbackground{
       background-image: url("../../Asset/320\ phone.png");
     }
   }
 
-  @media(min-width:769px)and(max-width:1200px){
+  @media(min-width:770px)and(max-width:1200px){
     .bannerbackground {
   
       background-image: url("../../Asset/hrbannerim.png") !important;

@@ -1,5 +1,8 @@
-input,textarea{
+.form-control1{
     border: 1px solid #291571 !important;
+}
+.fr{
+  border: 0px 0px 0px 1px solid #291571 !important;
 }
 .ccode{
   width: 10px !important;

@@ -9,9 +9,14 @@ function Aboutus() {
         <div className='row abpart'>
             <div className='col-sm-12 col-md-6 textclr about-title'>
             <div className='aboutpart'>
-            <p className='my-5 aboutheading'>About Us</p> 
-            <p className='abouttext'>With a rich legacy spanning decades, The KG Group has been at the forefront of innovative technologies. KGiSL, which introduced pioneering tech solutions in South India 25 years ago, has now evolved into a rapidly expanding IT company across the Indo-Pacific, operating in over 7 countries. </p>
-            <p className='abouttext'>KG Genius Labs delivers tailored global solutions in SAP, LMS, CRM, and digital services, making us the go-to partner for innovative business collaborations.</p>
+            <p className='my-5 aboutheading'><b>About Us</b></p> 
+            <p className='abouttext'>With a rich legacy spanning decades, The KG Group has led the way in tech advancements.
+KGiSL, a pioneer in South India 25 years ago, is now a fast-growing IT company,
+spanning 7 countries across the Indo-Pacific. </p>
+            <p className='abouttext'>KG Genius Labs, the latest venture, offers customized solutions globally.
+Our expertise includes SAP, LMS, CRM, IT Infrastructure,
+Bespoke Application Development, and Digital Marketing. We are the preferred
+partner for forward-thinking business collaborations.</p>
             <div className='knowmore text-end'><Link to="/aboutus">Know More</Link></div>
             </div>
             </div>

@@ -1,7 +1,27 @@
-.serviceheading{
-    font-size: 70px;
-    color: #291571;
+
+
+.serviceheading {
+    color: #291571; 
+    font-size: 65px !important;
+    font-weight: 700 !important;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 30px;
 }
+.serviceheading::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 35px;
+    height: 5px;
+    background: linear-gradient(90deg, #291571 0%, #4E28D7 100%);
+    border-radius: 2px 0 0 0;
+}
+
+
+
+
 
 .saptext{
     font-size: 48px;
@@ -10,14 +30,13 @@
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
-.sapborder-text {
-    -webkit-text-stroke: 1px #291571 !important; /* Purple border color */
-    color: transparent; /* Hide the text color */
-    padding: 0.5rem; /* Add some padding to adjust the size */
-    background-color: transparent; /* Ensure background is transparent */
-  }
-.sapborder-text:hover{
-    -webkit-text-stroke: 1.3px red !important;
+
+.servetext{
+    font-size: 70px;
+    background-image: linear-gradient(#D10D14, #6B060A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .servicesbg{
@@ -25,5 +44,4 @@
 }
 
 
-/* //aftereffects */
 

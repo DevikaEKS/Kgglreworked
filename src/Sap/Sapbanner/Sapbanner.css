@@ -1,0 +1,18 @@
+.sapbannerpart{
+    background-image: url("../Asset/Frame\ 31.png");
+    height: 100vh;
+    background-size: cover;
+    color: #fff;
+    padding: 20px 10px;
+}  
+.sapbannertext h1{
+    font-size: 62px;
+    font-family: 'Proxima Nova', sans-serif;  
+    font-weight: 600 !important;
+}
+
+@media (max-width:426px){
+    .sapbannertext h1{
+        font-size: 35px;
+    }
+}
