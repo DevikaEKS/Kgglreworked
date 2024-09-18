@@ -34,12 +34,15 @@
     border: 0 !important;
     box-shadow: 1px 1px 5px 1px rgb(199, 164, 205);
   }
+  .shadowsector:hover{
+    transform: scale(1.1);
+  }
  .imlogos{
   height: 80px;
   width: 80px;
  }
   
-  .parasectors{
+.parasectors{
     color: #33225E;
 }
 .sectorheading{

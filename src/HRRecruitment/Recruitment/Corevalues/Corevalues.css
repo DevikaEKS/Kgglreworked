@@ -13,7 +13,7 @@
 .coretexts{
     color:#33225E;
 }
-
+/* 
 @media (max-width:600px){
     .corepics1{
         min-height: 180px;
@@ -28,7 +28,7 @@
     }
 }
 
-@media (min-width: 992px) { /* Large devices */
+@media (min-width: 992px) { 
     .corepics1.large {
         display: block;
     }
@@ -38,7 +38,7 @@
     }
 }
 
-@media (max-width: 991px) { /* Small devices */
+@media (max-width: 991px) 
     .corepics1.large {
         display: none;
     }
@@ -68,4 +68,15 @@
     .corepics1{
         width: 300px;
     }  
+} */
+
+
+
+
+
+@media (max-width:769px){
+    .corepics1{
+        max-height: 300px;
+        max-width: 300px;
+    }
 }

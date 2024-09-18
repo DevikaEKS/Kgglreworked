@@ -21,6 +21,7 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
   font-size: 68px;
+  font-weight: 600;
 }
 
 .itsmallheading {
@@ -37,7 +38,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  font-size: 48px;
+  font-size: 68px;
 }
 .bannerkgdm{
   background-image: linear-gradient(to right,#291571, #C81B33,#DA1B2B,#ED1C24);
@@ -104,6 +105,7 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
   font-size: 68px; 
+ 
 }
 .sapheading{
   background-image: linear-gradient(#291571, #4E28D7);
@@ -111,6 +113,7 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
   font-size: 68px; 
+  font-weight: 600;
 }
 .dmheading{
   background-image: linear-gradient(#291571, #4E28D7);
@@ -118,6 +121,7 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
   font-size: 58px;
+  font-weight: 600;
 }
 
 
@@ -201,6 +205,7 @@
   }
   .itheading {
     font-size: 30px;
+  
   }
   .sapheading{
     font-size: 30px;
@@ -216,3 +221,29 @@
   }
 }
 
+
+
+
+
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Adjust this value as needed */
+}
+
+.carousel-control-prev {
+  left: 0; /* Align to the left */
+  right: auto; /* Remove default right positioning */
+}
+
+.carousel-control-next {
+  right: 0; /* Align to the right */
+  left: auto; /* Remove default left positioning */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: red;
+   /* Optional: add a background color to the icons */
+}

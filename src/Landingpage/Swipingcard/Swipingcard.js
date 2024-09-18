@@ -5,10 +5,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
-import cardim1 from "../../Asset/SAP.png";
-import cardim2 from "../../Asset/programming-background-collage.jpg";
-import cardim3 from "../../Asset/socialmedia.jpg";
-import cardim4 from "../../Asset/hr.jpg";
+import cardim1 from "../Asset/SAP service.jpg";
+import cardim2 from "../Asset/IT Service.jpg";
+import cardim3 from "../Asset/Digital marketing Service.jpg";
+import cardim4 from "../Asset/HR-Service.jpg";
 import "./Swipingcard.css";
 
 
@@ -16,7 +16,7 @@ import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules';
 
 function SwiperCard3D() {
   return (
-    <div className='container'>
+    <div className='container-fluid'>
       <div className='row'>
      
           <Swiper
@@ -38,41 +38,40 @@ function SwiperCard3D() {
               disableOnInteraction: false, 
             }}
             pagination={{ clickable: true }}
-            className='mySwiper'
-          >
+            className='mySwiper' >
            
             <SwiperSlide>
-              <div className="card mx-3" style={{ width: '300px'}}>
-                <img src={cardim1} alt="Sample Image" className="card-img-top" />
+              <div className="card procard" >
+                <img src={cardim1} title='Rise and Grow with SAP' alt=" Embrace digital transformation with SAP's Rise and Grow, streamlining strategies, enhancing experiences, and driving sustainable growth" className="card-img-top" />
                 <div className="card-body crdbdy">
-                  <h5 className="card-title text-center">SAP</h5>
+                  <h5 className="card-title text-center">SAP Services</h5>
                   <p className="card-text">Innovation drives us to help clients redefine their future, leveraging our know-how to achieve continuous improvement and lasting success.</p>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card smcrd" style={{ width: '300px' }}>
-                <img src={cardim2} alt="Sample Image" className="card-img-top" />
+              <div className="card procard" >
+                <img src={cardim2} title='Customized IT Services' alt=" KG Genius Labs creates value with tailored IT Services, aligning services with your business objectives" className="card-img-top" />
                 <div className="card-body crdbdy">
-                  <h5 className="card-title text-center">IT</h5>
-                  <p className="card-text">We blend industry insights, top technologies, and expert execution to optimize IT Infrastructure and tailor solutions that drive your success.</p>
+                  <h5 className="card-title text-center">IT Services</h5>
+                  <p className="card-text">We blend industry insights, top technologies, and expert execution to optimize IT Services and tailor solutions that drive your success.</p>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card smcrd" style={{ width: '300px' }}>
-                <img src={cardim3} alt="Sample Image" className="card-img-top" />
+              <div className="card procard" >
+                <img src={cardim3} title='KGGL Digital  Marketing Team' alt="The KGGL Digital Marketing Team provides tailored advertising solutions to enhance client retention and maximize conversions, driving your brand's digital success" className="card-img-top" />
                 <div className="card-body crdbdy">
-                  <h5 className="card-title text-center">Digital Marketing</h5>
+                  <h5 className="card-title text-center">Digital Marketing Services</h5>
                   <p className="card-text">We partner with ambitious brands to drive growth through creative solutions in AI, branding, tech advisory, and digital strategy, blending design and tech to solve challenges and enhance digital platforms.</p>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card" style={{ width: '300px' }}>
-                <img src={cardim4} alt="Sample Image" className="card-img-top" />
+              <div className="card procard">
+                <img src={cardim4} title='HR Consultancy' alt="Professional HR consultant working with a diverse team" className="card-img-top" />
                 <div className="card-body crdbdy">
-                  <h5 className="card-title text-center">HR Services</h5>
+                  <h5 className="card-title text-center">HR Consultancy</h5>
                   <p className="card-text">We don’t just place talent; we create opportunities. Our mission is to empower individuals and organizations, driving meaningful impact that transforms careers, communities, and economies.</p>
                 </div>
               </div>
@@ -87,3 +86,5 @@ function SwiperCard3D() {
 }
 
 export default SwiperCard3D;
+
+

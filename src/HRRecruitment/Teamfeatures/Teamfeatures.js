@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Teamfeatures.css";
 import teamimg1 from "../Asset/working-with-blueprint.jpg";
-import teamimg2 from "../Asset/managers-analyzing-sales-results.jpg";
+import teamimg2 from "../Asset/Team 3.jpg";
 import teamimg3 from "../Asset/successful-medical-team.jpg";
 
 function Teamfeatures() {
@@ -15,9 +15,9 @@ function Teamfeatures() {
       <div className='row sm-mx-0 lg-mx-5'>
         <div className='col-sm-12 col-md-4 col-lg-4 my-2'>
           <div className='card mx-auto tcard h-100 curvespart'>
-            <img src={teamimg1} className='card-img-top' alt="Team Member 1" />
+            <img src={teamimg1} className='card-img-top' title='Blue-collar professionals' alt="Blue-collar professionals engaged in skilled trades" />
             <div className='card-body featurescard'>
-              <h5 className='card-title text-light titleteam'>BLUE-COLLAR PROFESSIONALS</h5>
+              <h5 className='card-title text-light titleteam'>Blue-Collar Professionals</h5>
 
               <ul className='listpart'>
                 <li>Skilled Roles tailored to your needs.</li>
@@ -27,9 +27,9 @@ function Teamfeatures() {
         </div>
         <div className='col-sm-12 col-md-4 col-lg-4 my-2'>
           <div className='card mx-auto tcard h-100  curvespart'>
-            <img src={teamimg3} className='card-img-top' alt="Team Member 2" />
+            <img src={teamimg3} className='card-img-top' title='Healthcare professionals' alt="HR consultants working with healthcare professionals" />
             <div className='card-body featurescard'>
-              <h5 className='card-title text-light titleteam'>HEALTHCARE PROFESSIONALS</h5>
+              <h5 className='card-title text-light titleteam'>Healthcare Professionals</h5>
               <ul className='listpart'>
                 <li>Nursing</li>
                 <li>Physiotherapy</li>
@@ -40,9 +40,10 @@ function Teamfeatures() {
         </div>
         <div className='col-sm-12 col-md-4 col-lg-4 my-2'>
           <div className='card mx-auto  tcard h-100  curvespart'>
-            <img src={teamimg2} className='card-img-top' alt="Team Member 3" />
+            <img src={teamimg2} className='card-img-top' title='White-collar professionals
+' alt="White-collar workers in an office environment, featuring IT professionals " />
             <div className='card-body featurescard'>
-              <h5 className='card-title text-light titleteam'>WHITE-COLLAR PROFESSIONALS</h5>
+              <h5 className='card-title text-light titleteam'>White-Collar Professionals</h5>
               <ul className='listpart'>
                 <li>IT Roles</li>
                 <li>Non-IT Roles</li>

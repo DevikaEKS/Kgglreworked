@@ -69,18 +69,14 @@ background-color: rgba(255, 255, 255, 0.4);
  
 }
   
-  
- 
-
-
-
-
-
+.navtext1:active{
+  background-color: #fff !important;
+}
 .navtext {
   position: relative;
   text-decoration: none;
-  color: black; /* Adjust this to your desired text color */
-  padding-bottom: 5px; /* Add some padding at the bottom for the underline space */
+  color: black; 
+  padding-bottom: 5px; 
 }
 
 .navtext:hover::after {
@@ -89,10 +85,10 @@ background-color: rgba(255, 255, 255, 0.4);
   left: 0;
   right: 0;
   bottom: 0;
-  height: 3px; /* Thickness of the underline */
-  background-image: linear-gradient(to right,#D10D14,#6B060A); /* Color of the underline */
+  height: 3px; 
+  background-image: linear-gradient(to right,#D10D14,#6B060A); 
   transform: scaleX(0.8);
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  transition: transform 0.3s ease; 
 }
 
 .navtext::after {
@@ -101,11 +97,11 @@ background-color: rgba(255, 255, 255, 0.4);
   left: 0;
   right: 0;
   bottom: 0;
-  height: 3px; /* Thickness of the underline */
+  height: 3px; 
   background-image: linear-gradient(to right,#D10D14,#6B060A);
-  border-radius: 5px; /* Color of the underline */
+  border-radius: 5px; 
   transform: scaleX(0);
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  transition: transform 0.3s ease; 
 }
 
   

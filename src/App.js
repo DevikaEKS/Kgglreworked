@@ -8,10 +8,9 @@ import Contact from './Landingpage/Contact/Contact';
 import Footer from './Landingpage/Footer/Footer';
 import Footercard from './Landingpage/Footercard/Footercard';
 import AboutKggl from './Aboutsection/AboutKggl/AboutKggl';
-import Mission from './Mission/Mission';
+import Mission from './Aboutsection/Mission/Mission';
 import Banner from './Landingpage/Banner/Banner';
 import Ourservices from './Landingpage/Ourservices/Ourservices';
-import SwiperCard3D from './Landingpage/Swipingcard/Swipingcard';
 import Whygeniuslabs from './Aboutsection/Whygeniuslabs/Whygeniuslabs';
 import Teamfeatures from './HRRecruitment/Teamfeatures/Teamfeatures';
 import Bannerhr from './HRRecruitment/Recruitment/Bannerhr/Bannerhr';
@@ -24,10 +23,15 @@ import Blogpreview from './Blogs/Blogpreview/Blogpreview';
 import Discover from './HRRecruitment/Discover/Discover';
 import Hrfootercard from './HRRecruitment/Hrfootercard/Hrfootercard';
 import Sapbanner from './Sap/Sapbanner/Sapbanner';
-import Sapsupport from './Sap/Sapsupport/Sapsupport';
-import Analysis from './Sap/Analysis/Analysis';
-import Valueadded from './Sap/Valueadded/Valueadded';
 import Sapimplementation from './Sap/Sapimplementation/Sapimplementation';
+import Hanacloud from './Sap/Hanacloud/Hanacloud';
+import Methodology from './Sap/Methodology/Methodology';
+import Greenfield from './Sap/Greenfield/Greenfield';
+import Newimplement from './Sap/Newimplement/Newimplement';
+import Contactpage from './Landingpage/Contactpage/Contactpage';
+import Contactsap from './Sap/Contactsap/Contactsap';
+import Hrfooter from './HRRecruitment/Hrfooter/Hrfooter';
+import Footerabout from './Aboutsection/Footerabout/Footerabout';
 
 function App() {
   return (
@@ -35,14 +39,12 @@ function App() {
       <BrowserRouter>
       <Routes>
       <Route path='/' element={[<Menubar/>,<Banner/>,<Aboutus/>,<Ourservices/>,<Credentials/>,<Insights/>, <Contact/>, <Footercard/>,<Footer/>]}/>
-      <Route path='/aboutus' element={[<Menubar/>,<AboutKggl/>,<Evolution/>,<Mission/>,<Whygeniuslabs/>,<Footercard/>,<Footer/>]}/> 
-      <Route path='/d' element={<SwiperCard3D/>}/>
-      <Route path='/hr' element={[<Menubar/>,<Bannerhr/>,<Aboutpagehr/>,<Teamfeatures/>,<Sectors/>,<Clientpage/>,<Corevalues/>,,<Discover/>,<Hrfootercard/>,<Footer/>]}/>
-      <Route path='/blog' element={[<Menubar/>,<Blogpreview/>]}/>
-      <Route path='/sap' element={[<Sapbanner/>,<Sapsupport/>,<Footercard/>,<Footer/>]}/>
-      <Route path='/analyse' element={[<Sapbanner/>,<Analysis/>]}/>
-      <Route path='/valueadded' element={[<Sapbanner/>,<Valueadded/>,<Footercard/>,<Footer/>]}/>
-      <Route path='/imp' element={<Sapimplementation/>}  />
+      <Route path='/aboutuspage' element={[<Menubar/>,<AboutKggl/>,<Evolution/>,<Mission/>,<Whygeniuslabs/>,<Footercard/>,<Footerabout/>]}/> 
+      <Route path='/hr' element={[<Menubar/>,<Bannerhr/>,<Aboutpagehr/>,<Teamfeatures/>,<Sectors/>,<Clientpage/>,<Corevalues/>,<Footercard/>,<Hrfooter/>]}/>
+      <Route path='/blogs' element={[<Menubar/>,<Blogpreview/>]}/>
+      <Route path='/imp' element={[<Sapimplementation/>,<Hanacloud/>,<Methodology/>,<Greenfield/>,<Newimplement/>,<Contactsap/>]}/>
+      <Route path='/contact' element={[<Menubar/>,<Contactpage/>,<Footercard/>,<Footer/>]}/>
+      <Route path='/sapb' element={[<Menubar/>,<Sapbanner/>]}/>
       </Routes>      
       </BrowserRouter>
      

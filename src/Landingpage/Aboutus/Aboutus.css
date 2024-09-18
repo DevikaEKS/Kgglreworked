@@ -22,7 +22,7 @@
 }
 
 .aboutheading {
-    color: #291571; 
+    color: #291571 !important; 
     font-size: 48px !important;
     font-weight: 400 !important;
     font-family: 'Proxima Nova', sans-serif;
@@ -41,6 +41,11 @@
     border-radius: 2px 0 0 0;
 }
 
+.aboutimg{
+    min-height: 320px;
+    min-width: 320px;
+}
+
 @media (max-width:768px){
     .aboutpart{
         margin: 0px;
@@ -48,6 +53,7 @@
     .aboutimg{
         height: 320px;
         width: 320px;
+      
     }
     .aboutheading {
         font-size: 24px !important;

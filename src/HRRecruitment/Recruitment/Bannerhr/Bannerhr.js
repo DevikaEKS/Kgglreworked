@@ -6,8 +6,8 @@ import { Link as Sclink } from 'react-scroll';
 function Bannerhr() {
   return (
     <div className='container-fluid bannerbackground' id='hrbanner'>
-      <div className='d-flex flex-column justify-content-center align-items-start'>
-        <h1 className='text-light paratext'>
+      <div className='d-flex flex-column justify-content-center align-items-start ps-sm-0 ps-md-3'>
+        <h1 className='text-light paratext '>
           We're <span style={{fontWeight: "bold"}}>The Human</span> In <br />
           Your <span style={{fontWeight: "bold"}}>Human Resources</span>
         </h1>

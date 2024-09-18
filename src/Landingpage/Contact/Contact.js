@@ -1,130 +1,70 @@
-
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import "./Contact.css";
-import contactimg from "../../Asset/contact.png";
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import './Contact.css'; // Optional for custom styling
 
 function Contact() {
-  const [countryCodes, setCountryCodes] = useState([]);
-  const [selectedCountryCode, setSelectedCountryCode] = useState('+91'); // Default country code set to +91
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phoneNumber: '',
-    companyName: '',
-    description: ''
-  });
-  const [errors, setErrors] = useState({});
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
 
-  useEffect(() => {
-    axios.get('https://restcountries.com/v3.1/all')
-      .then(response => {
-        const data = response.data;
-        const codes = data.map(country => ({
-          name: country.name.common,
-          code: country.idd?.root ? `${country.idd.root}${country.idd.suffixes ? country.idd.suffixes[0] : ''}` : '+1'
-        }));
-        setCountryCodes(codes);
-      })
-      .catch(error => console.error('Error fetching country codes:', error));
-  }, []);
-
-  const validateForm = () => {
-    const newErrors = {};
-    const nameRegex=/^[a-z\s\.]{2,}$/;
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const phoneRegex = /^\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?(\d{1,4}[-.\s]?){1,3}$/;
-
-
-    if (!formData.name || !nameRegex.test(formData.name)) {
-      newErrors.name = 'Name must contain at least 2 letters.';
-    }
-
-    if (!formData.email || !emailRegex.test(formData.email)) {
-      newErrors.email = 'Invalid email address.';
-    }
-    if (!formData.phoneNumber || !phoneRegex.test(selectedCountryCode + formData.phoneNumber)) {
-      newErrors.phoneNumber = 'Invalid phone number.';
-    }
-    setErrors(newErrors);
-
-    return Object.keys(newErrors).length === 0;
-  };
+  // Email regex for validation
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      console.log("Form submitted successfully", formData);
-      // Proceed with the form submission logic
+    if (!emailRegex.test(email)) {
+      setEmailError('Please enter a valid email address.');
     } else {
-      console.log("Validation failed");
+      setEmailError('');
+      // Handle form submission here
+      console.log('Form submitted successfully');
     }
   };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
-    <div className='container contactpart my-3'>
-      <div className='row contacttext'>
-        <div className='col-sm-12 col-md-6'>
-          <h1 className='contactheading mb-4'>Let’s Connect</h1>
-          <p className='contactpara'>Explore how our customized IT solutions can elevate your business. Get in touch with our experts today!</p>
-          <img src={contactimg} alt='contactus' className='img-fluid'/>
-        </div>
-        <div className='col-sm-12 col-md-6'>
-          <form onSubmit={handleSubmit}>
-            <div className='form-group m-3'> 
-              <label className='form-label'>Name</label>
-              <input type='text' className='form-control form-control1' name='name' value={formData.name} onChange={handleChange} />
-              {errors.name && <small className='text-danger'>{errors.name}</small>}
-            </div>
-            <div className='form-group m-3'> 
-              <label className='form-label'>Email</label>
-              <input type='email' className='form-control form-control1' name='email' value={formData.email} onChange={handleChange} />
-              {errors.email && <small className='text-danger'>{errors.email}</small>}
-            </div>
-            <div className='form-group m-3'> 
-              <label className='form-label'>Phone Number</label>
-              <div className='input-group form-control1 rounded-2'>
-                <select
-                  className='form-select'
-                  value={selectedCountryCode}
-                  onChange={e => setSelectedCountryCode(e.target.value)}
-                  style={{width:"30%"}}
-                >
-                  {countryCodes.map((country, index) => (
-                    <option key={index} value={country.code}>
-                      {country.name} ({country.code})
-                    </option>
-                  ))}
+    <div className="container-fluid mt-5 contactpartbg py-3">
+      <div className='container'>
+        <div className="row justify-content-center align-items-center">
+          <div className="col-sm-12 col-md-6 text-light ">
+            <h1 className='contactheading'>Let’s Connect</h1>
+            <p className='connectpara'>Explore how our customized IT solutions can elevate your business. Get in touch with our experts today!</p>
+          </div>
+          <div className="col-sm-12 col-md-6">
+            <form onSubmit={handleSubmit} className="p-4">
+              <div className="form-group mb-3 position-relative">
+                <label htmlFor="requestEmail" className='text-light py-1'>Request Type</label>
+                <select id="requestEmail" className="form-control text-light">
+                  <option value="Select" >Select</option>
+                  <option value="Contact Sales">Contact Sales</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Partner Inquiry">Partner Inquiry</option>
+                  <option value="Subscribe our Newsletter">Subscribe our Newsletter</option>
                 </select>
-                <input
-                  type='text'
-                  className='form-control'
-                  placeholder='Enter your phone number'
-                  name='phoneNumber'
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  style={{width:"70%"}}
-                 
-                />
+                <FontAwesomeIcon icon={faCaretDown} className="dropdown-icon" />
               </div>
-              {errors.phoneNumber && <small className='text-danger'>{errors.phoneNumber}</small>}
-            </div>
-            <div className='form-group m-3'> 
-              <label className='form-label'>Company Name</label>
-              <input type='text' className='form-control form-control1' name='companyName' value={formData.companyName} onChange={handleChange} required/>
-            </div>
-            <div className='form-group m-3'> 
-              <label className='form-label'>Description</label>
-              <textarea className='form-control form-control1' name='description' rows='3' value={formData.description} onChange={handleChange} required></textarea>
-            </div>
-            <div className='d-flex justify-content-end mt-4'>
-              <input type='submit' className='contactbtn py-2 rounded-2 border border-0' value='Submit' required/>
-            </div>
-          </form>
+
+              <div className="form-group mb-3">
+                <label htmlFor="businessEmail" className='text-light py-1'>Business Email</label>
+                <input
+                  type="text"
+                  id="businessEmail"
+                  className={`form-control ${emailError ? 'is-invalid' : ''}`}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your business email"
+                />
+                {emailError && <div className="invalid-feedback">{emailError}</div>}
+              </div>
+
+              <div className="form-group py-2">
+                <button type="submit" className="submitbtn py-2 px-4 rounded-1">
+                  Submit
+                </button>
+              </div>
+              <p className='text-light pt-3 privacytext'>
+                The information you provide in this form will be used to process your request and keep you informed about our services, in line with KG Genius Lab's <span style={{color:"#ffff00"}}>Privacy Policy.</span>
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </div>

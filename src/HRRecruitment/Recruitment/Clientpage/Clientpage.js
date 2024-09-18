@@ -7,7 +7,7 @@ function Clientpage() {
     <div className='container-fluid clientsbg' id='clientus'>
 <div className='row'>
     <div className='col-sm-12 col-md-6'>
-<img src={clientimg} className='ms-sm-0 ms-lg-5 container-fluid'/>
+<img src={clientimg} title='Why to choose KG Genius Labs as your HR Consultancy Partner' alt='Key benefits include industry-relevant talents, cost-efficient training, low-cost deployment, hassle-free mobilization, and high ROI' className='ms-sm-0 ms-lg-5 container-fluid'/>
     </div>
     <div className='col-sm-12 col-md-6'>
         <div className='mt-5'>

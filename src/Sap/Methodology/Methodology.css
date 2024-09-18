@@ -1,0 +1,18 @@
+.methodtxt{
+    color: #291571;
+    font-size: 68px;
+    font-family: 'Proxima Nova', sans-serif;  
+}
+
+@media (max-width:769px){
+    .methodim{
+        max-height: 300px;
+        max-width: 200px;
+    }
+    .methodtxt{
+        font-size: 48px !important;
+    }
+    .methodtext{
+        text-align: center;
+    }
+}

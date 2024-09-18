@@ -2,7 +2,7 @@
 .bgdiscover {
   background: url('../Asset/Rectangle\ 4374\ \(1\).png') ; 
   background-size: cover; 
-  height: 100vh;
+  height: 100%;
 }
 
 
@@ -22,10 +22,11 @@
   font-size: 24px;
 }
 
-@media (max-width:768px){
+@media (max-width:769px){
   .bgdiscover {
-    background-image: linear-gradient(#09091b,#2b2b81) ;
-    height: 50vh !important;
+    background-image: linear-gradient(#09091b,#291571) ;
+    padding: 10px 100px;
+    /* height: 50vh !important; */
   }
   
 }

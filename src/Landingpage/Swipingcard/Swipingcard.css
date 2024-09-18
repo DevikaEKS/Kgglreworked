@@ -5,4 +5,9 @@
 }
 
 
+@media (max-width:427px){
+    .procard{
+        width: 250px;
+    }
+}
 

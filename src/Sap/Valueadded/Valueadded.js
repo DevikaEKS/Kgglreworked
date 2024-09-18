@@ -8,9 +8,10 @@ import abap6 from "../Asset/topic-700-3765c64dcede404c 1.png";
 import "./Valueadded.css";
 function Valueadded() {
   return (
-    <div className='container abap my-5'>
-        <div className='row text-center my-3'>
-            <h1 className='my-5 valuehead'>Value Added Solutions</h1>
+    <div className='container-fluid bganalyse'> 
+    <div className='container abap py-3'>
+        <div className='row text-center'>
+            <h1 className='my-5 hanahead'>Value Added Solutions</h1>
             <p className='px-4 px-lg-5 paravalue'>We help organizations make the best agile decisions through the power of data management and analysis, understanding the past, monitoring the present, and predicting the future. We help you transform your business by unlocking the power of data and driving business outcomes via SAP Business Analytics (Fiori / SAC) and Power BI, with customized dashboards, infographics, and operational metrics.</p>
             <div className='col-sm-12 col-lg-6 abappart'>
                 <div className='abapbox m-2 p-5'>
@@ -68,16 +69,7 @@ function Valueadded() {
                     <p>Understanding, connecting, and communicating with clients, suppliers, and collaborators. Positioning our brand. Selling and providing our products and services.</p>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
+            </div>
         </div>
     </div>
   )

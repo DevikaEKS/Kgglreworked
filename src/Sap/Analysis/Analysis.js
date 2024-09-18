@@ -71,10 +71,11 @@ import './Analysis.css';
 
 function Analysis() {
   return (
+    <div className='container-fluid bganalyse'>
     <div className='container'>
-      <div className='row text-center my-5 analysepart'>
+      <div className='row text-center py-3 analysepart'>
         <div className='col-12'>
-          <h1 className='analysehead my-5'>Data & Analytics</h1>
+          <h1 className='hanahead my-5'>Data & Analytics</h1>
           <p className='paraanalyse'>
             We help organizations make the best agile decisions through the power of data management and analysis, understanding the past, monitoring the present, and predicting the future. We help you transform your business by unlocking the power of data and driving business outcomes via <b>SAP Business Analytics (Fiori / SAC) and Power BI,</b> with customized dashboards, infographics and operational metrics.
           </p>
@@ -116,6 +117,7 @@ function Analysis() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
