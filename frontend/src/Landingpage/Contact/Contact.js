@@ -43,7 +43,7 @@ function Contact() {
     setLoading(true);
 
     // Submit the form data
-    axios.post('http://192.168.252.178:5000/submit-form', formData)
+    axios.post('http://kggeniuslabs.com:4000/submit-form', formData)
       .then(response => {
         console.log(response);
         if (response.data.message === "Form submitted successfully") {
@@ -90,10 +90,10 @@ function Contact() {
                   <option value="1">Contact Sales</option>
                   <option value="2">General Inquiry</option>
                   <option value="3">Partner Inquiry</option>
-                  <option value="4">Subscribe to our Newsletter</option>
+                
                 </select>
                 {requestTypeError && <div className="invalid-feedback d-block">{requestTypeError}</div>}
-                <FontAwesomeIcon icon={faCaretDown} className="dropdown-icon" />
+                <FontAwesomeIcon icon={faCaretDown} className="dropdown-icon text-light" />
               </div>
 
               <div className="form-group mb-3">

@@ -1,10 +1,8 @@
-
-
-
 import React from 'react';
 import method1 from "../Asset/image 46.png";
-import "./Methodology.css";
 import method2 from "../Asset/Group 270990189.png";
+import method3 from "../Asset/methodmobile.png";
+import "./Methodology.css";
 
 function Methodology() {
   return (
@@ -29,8 +27,14 @@ function Methodology() {
         </div>
       </div>
 
-      <div className='row mx-3 my-5 py-5'>
-        <img src={method2} className='d-block mx-auto' title='SAP S/4HANA Implementation' alt="SAP S/4HANA with Active Methodology Steps"/>
+      {/* method2 for large devices */}
+      <div className='row mx-3 my-5 py-5 d-none d-md-block'>
+        <img src={method2} className='method-desktop d-block mx-auto' title='SAP S/4HANA Implementation' alt="SAP S/4HANA with Active Methodology Steps"/>
+      </div>
+
+      {/* method3 for small devices */}
+      <div className='row mx-3 my-5 py-5 d-block d-md-none'>
+        <img src={method3} className='method-mobile d-block mx-auto' title='SAP S/4HANA Implementation' alt="SAP S/4HANA with Active Methodology Steps"/>
       </div>
     </div>
   );

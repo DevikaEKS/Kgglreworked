@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Blogpreview.css";
-import cardim1 from "../../Asset/Rectangle 46.png";
+import cardim1 from "../../Asset/blog.jpg";
 import cardim2 from "../../Asset/Rectangle 47.png";
 import cardim3 from "../../Asset/Rectangle 48.png";
 function Blogpreview() {

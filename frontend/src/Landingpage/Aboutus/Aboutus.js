@@ -7,7 +7,7 @@ function Aboutus() {
   return (
     <div className='container textclr' id='About'>
         <div className='row abpart'>
-            <div className='col-sm-12 col-md-6 textclr about-title'>
+            <div className='col-sm-12 col-md-6 textclr about-title me-sm-0 me-lg-5'>
             <div className='aboutpart'>
             <p className='my-5 aboutheading'><b>About Us</b></p> 
             <p className='abouttext'>With a rich legacy spanning decades, The KG Group has led the way in tech advancements.
@@ -20,9 +20,17 @@ partner for forward-thinking business collaborations.</p>
             <div className='knowmore text-end'><Link to="/aboutus">Know More</Link></div>
             </div>
             </div>
-            <div className='col-sm-12 col-md-5 pt-5 ms-1'>
-            <img src={img1} title='About KG Genius Labs' alt='We empower businesses with advanced IT infrastructure solutions that fuel growth and success. Focused on innovation, we provide tailored services designed to meet diverse client needs' className='aboutimg'/>
-            </div>
+            <div className='col-sm-12 col-md-4 pt-5 mx-sm-0 mx-md-5 text-center text-md-start'>
+    <img 
+    src={img1} 
+    title='About KG Genius Labs' 
+    alt='We empower businesses with advanced IT infrastructure solutions that fuel growth and success. Focused on innovation, we provide tailored services designed to meet diverse client needs' 
+    className='aboutimg' 
+  />
+</div>
+
+
+
         </div>
     </div>
   )

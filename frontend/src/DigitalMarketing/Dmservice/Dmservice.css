@@ -1,3 +1,6 @@
+.dmservepart{
+    background-image: linear-gradient(to top,rgb(169, 143, 228),white);
+}
 .siconimg{
     height: 50px;
     width: 50px;
@@ -18,4 +21,30 @@
 .servcard:hover {
     transform: translateY(-10px);
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3), -10px -10px 30px rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width:426px){
+    .servepara{
+        font-size: 20px;
+        text-align: justify;
+        padding: 20px 10px;
+    }
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slide up effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.servcard {
+    animation: fadeIn 0.5s ease-in-out; /* Animation applied to the card */
 }

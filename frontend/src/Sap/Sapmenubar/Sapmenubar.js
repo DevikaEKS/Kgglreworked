@@ -23,14 +23,14 @@ function Sapmenubar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link as={RouterLink} to="/" className='navtext px-3' onClick={handleSelect}>Home</Nav.Link>
-            <Nav.Link as={RouterLink} to="/aboutuspage" className='navtext px-3' onClick={handleSelect}>About Us</Nav.Link>
+            <Nav.Link as={RouterLink} to="/aboutus" className='navtext px-3' onClick={handleSelect}>About Us</Nav.Link>
             <NavDropdown title={<span className='px-3 navtext1'>Our Services</span>} id="basic-nav-dropdown">
-              <NavDropdown.Item as={RouterLink} to="/sapb" className='navtext1' onClick={handleSelect}>SAP Services</NavDropdown.Item>
+              <NavDropdown.Item as={RouterLink} to="/SAP_Services_Consultancy" className='navtext1' onClick={handleSelect}>SAP Services</NavDropdown.Item>
               <NavDropdown.Item as={RouterLink} to="/it" className='navtext1 px-3' onClick={handleSelect} disabled>IT Services</NavDropdown.Item>
-              <NavDropdown.Item as={RouterLink} to="/Digital Marketing" className='navtext1' onClick={handleSelect}>Digital Marketing Services</NavDropdown.Item>
-              <NavDropdown.Item as={RouterLink} to="/hr" className='navtext1' onClick={handleSelect}>HR Consultancy</NavDropdown.Item>
+              <NavDropdown.Item as={RouterLink} to="/Digital_Marketing_Consultancy" className='navtext1' onClick={handleSelect}>Digital Marketing Services</NavDropdown.Item>
+              <NavDropdown.Item as={RouterLink} to="/HR_Consultancy" className='navtext1' onClick={handleSelect}>HR Consultancy</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link className='navtext px-3' onClick={handleSelect}>Blog</Nav.Link>
+            <Nav.Link as={RouterLink} to="/blogs" className='navtext px-3' onClick={handleSelect}>Blog</Nav.Link>
           </Nav>
           <Nav className='ms-auto'>
             {/* Using ScrollLink from react-scroll for smooth scrolling */}
@@ -38,7 +38,7 @@ function Sapmenubar() {
               to="sapcontact"  // ID of the contact section
               smooth={true}
               duration={500}
-              className='contactbutton px-3 rounded-1 text-decoration-none'
+              className='contactbutton px-3 py-2 rounded-1 text-decoration-none'
               onClick={() => setExpanded(false)} // Close navbar when clicking link
             >
               Contact Us

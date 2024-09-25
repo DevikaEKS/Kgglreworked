@@ -51,14 +51,16 @@
         margin: 0px;
     } 
     .aboutimg{
-        height: 320px;
-        width: 320px;
-      
+        height: 300px;
+        width: 300px; 
     }
     .aboutheading {
         font-size: 24px !important;
     }
     .abouttext{
         font-size: 16px;
+    }
+    .knowmore{
+        font-size: 16px; 
     }
 }

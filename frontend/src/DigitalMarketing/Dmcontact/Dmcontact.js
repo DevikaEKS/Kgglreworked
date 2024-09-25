@@ -75,7 +75,7 @@ function Dmcontact() {
     setLoading(true);
 
     // Submit the form data
-    axios.post('http://192.168.252.178:5000/submit-form', formValues)
+    axios.post('http://kggeniuslabs.com:4000/submit-form', formValues)
       .then(response => {
         if (response.data.message === "Form submitted successfully") {
           alert('Form submitted successfully!');
@@ -112,7 +112,7 @@ function Dmcontact() {
   };
 
   return (
-    <div className='container-fluid frmcontacts'>
+    <div className='container-fluid frmcontacts' id='dmcontact'>
       <div className='container'>
         <div className='row my-5 py-4'>
           <div className='col-sm-12 col-md-6 d-flex align-items-center justify-content-center'>
@@ -132,7 +132,6 @@ function Dmcontact() {
                   <option value="1">Contact Sales</option>
                   <option value="2">General Inquiry</option>
                   <option value="3">Partner Inquiry</option>
-                  <option value="4">Subscribe our Newsletter</option>
                 </select>
                 <FontAwesomeIcon icon={faCaretDown} className="dropdown-icon" />
               </div>
@@ -158,7 +157,7 @@ function Dmcontact() {
                     className='form-select'
                     value={selectedCountryCode}
                     onChange={e => setSelectedCountryCode(e.target.value)}
-                    style={{ width: "30%" }}
+                    style={{ width: "25%" }}
                   >
                     {countryCodes.map((country, index) => (
                       <option key={index} value={country.code}>
@@ -174,7 +173,7 @@ function Dmcontact() {
                     name='phoneNumber'
                     value={formData.phoneNumber}
                     onChange={handleChange}
-                    style={{ width: "70%" }}
+                    style={{ width: "75%" }}
                     required
                     pattern="[0-9]*"
                     maxLength="15"
@@ -221,14 +220,17 @@ function Dmcontact() {
                 ></textarea>
               </div>
 
-              <div className='d-flex justify-content-end mt-4'>
+              <div className='d-flex justify-content-center mt-4'>
                 <input
                   type='submit'
-                  className='contactbtn py-2 rounded-2 border border-0'
+                  className='contactbtn py-2 px-4 rounded-2 border border-0'
                   value={loading ? 'Submitting...' : 'Submit'}
                   disabled={loading}
                 />
               </div>
+              <p className='pt-3 privacytext ps-3 pe-1'>
+                The information you provide in this form will be used to process your request and keep you informed about our services, in line with KG Genius Lab's <span style={{ color: "#ed1c24" }}>Privacy Policy.</span>
+              </p>
             </form>
           </div>
         </div>

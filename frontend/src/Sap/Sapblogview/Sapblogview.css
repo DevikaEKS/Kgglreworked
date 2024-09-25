@@ -1,0 +1,29 @@
+.imsp{
+    max-height: 400px;
+    max-width: 500px;
+}
+.inpbrd{
+    border: 1px solid #291750;
+    color: #291750;
+}
+.subbtnclr{
+    background-color: #291750;
+    color: #fff;
+    border: 0px;
+    padding: 5px;
+    margin:10px
+}
+.shadowcard{
+    box-shadow: 1px 1px 10px 2px #d8d6df;
+    border: 0px !important;
+}
+
+.rqtxt{
+    font-weight: 600;
+    color: #291750;
+}
+@media(max-width:426px){
+    .imsp{
+        height: 200px;
+    }
+}

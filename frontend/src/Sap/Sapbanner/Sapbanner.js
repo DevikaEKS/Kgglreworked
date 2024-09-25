@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import Footercard from '../../Landingpage/Footercard/Footercard';
-import Footer from '../../Landingpage/Footer/Footer';
 import Sapsupport from '../Sapsupport/Sapsupport';
 import Valueadded from '../Valueadded/Valueadded';
 import Sapimplementation from '../Sapimplementation/Sapimplementation';
@@ -15,6 +14,7 @@ import Newimplement from '../Newimplement/Newimplement';
 import Contactsap from '../Contactsap/Contactsap';
 import Analysis from '../Analysis/Analysis';
 import Footersap from '../FooterSap/Footersap';
+import Sapblog from '../Sapblog/Sapblog';
 
 function Sapbanner() {
   // Initialize 's4hana' as the default selected section
@@ -36,11 +36,11 @@ function Sapbanner() {
                 <h1>Discover Our Comprehensive</h1>
                 <h1>Portfolio Of End-to-End Services.</h1>
                 <p>
-                  Through technology, we provide advanced solutions to meet the current and future challenges of organizations. KG Genius Labs offers an extensive range of SAP solutions that are customizable to match the unique needs of clients.
+                  Through technology, we provide advanced solutions to meet the current and future challenges of organizations.<br/> KG Genius Labs offers an extensive range of SAP solutions that are customizable to match the unique needs of clients.
                 </p>
                 <div className='d-flex flex-column flex-lg-row justify-content-start fnt'>
                   
-                  <div className='col-sm-12 col-lg-7 my-2'>
+                  <div className='col-sm-12 col-lg-7'>
                   <Link
                     to="#"
                     onClick={() => handleLinkClick('s4hana')}
@@ -48,7 +48,7 @@ function Sapbanner() {
                     S/4HANA Implementations <FontAwesomeIcon icon={faAngleRight} />
                   </Link>
                   </div>
-                  <div className='col-sm-12 col-lg-5 my-2'>
+                  <div className='col-sm-12 col-lg-5'>
                   <Link
                     to="#"
                     onClick={() => handleLinkClick('support')}
@@ -58,7 +58,7 @@ function Sapbanner() {
                 </div>
                 </div>
                 <div className='d-flex flex-column flex-lg-row justify-content-start fnt'>
-                  <div className='col-sm-12 col-lg-7 my-2'>
+                  <div className='col-sm-12 col-lg-7'>
                   <Link
                     to="#"
                     onClick={() => handleLinkClick('data')}
@@ -66,7 +66,7 @@ function Sapbanner() {
                     Data & Analytics <FontAwesomeIcon icon={faAngleRight} />
                   </Link>
                   </div>
-                  <div className='col-sm-12 col-lg-5 my-2'>
+                  <div className='col-sm-12 col-lg-5'>
                   <Link
                     to="#"
                     onClick={() => handleLinkClick('valueAdded')}
@@ -89,6 +89,7 @@ function Sapbanner() {
               <Methodology />
               <Greenfield />
               <Newimplement />
+              <Sapblog/>
               <Contactsap />
               <Footercard />
               <Footersap />
@@ -97,6 +98,7 @@ function Sapbanner() {
           {selectedSection === 'support' && (
             <div>
               <Sapsupport />
+              <Sapblog/>
               <Contactsap />
               <Footercard />
               <Footersap />
@@ -105,6 +107,7 @@ function Sapbanner() {
           {selectedSection === 'data' && (
             <div>
               <Analysis />
+              <Sapblog/>
               <Contactsap />
               <Footercard />
               <Footersap />
@@ -113,6 +116,7 @@ function Sapbanner() {
           {selectedSection === 'valueAdded' && (
             <div>
               <Valueadded />
+              <Sapblog/>
               <Contactsap />
               <Footercard />
               <Footersap />

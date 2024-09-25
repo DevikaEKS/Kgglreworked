@@ -10,6 +10,11 @@
     font-size: 24px;
     font-weight: 700 !important;
   }
-
+.qklink::after{
+    content: " ";
+    width: 10%;
+    height: 2px;
+    color: red;
+}
 
   

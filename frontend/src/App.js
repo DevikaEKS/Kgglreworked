@@ -38,20 +38,35 @@ import Adoptdm from './DigitalMarketing/Adoptdm/Adoptdm';
 import Dmcontact from './DigitalMarketing/Dmcontact/Dmcontact';
 import Footerdm from './DigitalMarketing/Footerdm/Footerdm';
 import Sapmenubar from './Sap/Sapmenubar/Sapmenubar';
+import Menubardm from './DigitalMarketing/Menubardm/Menubardm';
+import Hrmenubar from './HRRecruitment/Hrmenubar/Hrmenubar';
+import BannerIT from './IT/BannerIT/BannerIT';
+import Itfooter from './IT/ITFooter/Itfooter';
+import CardCarousel from './IT/Cardcarousel';
+import Dmblogview from './DigitalMarketing/DMblogview/Dmblogview';
+import Dmblog from './DigitalMarketing/Dmblog/Dmblog';
+import Sapblogview from './Sap/Sapblogview/Sapblogview';
+import Contactpages from './Landingpage/Contactpages/Contactpages';
+import Blogviewed from './Landingpage/Blogviewed/Blogviewed';
+import Blogit from './IT/Blogit/Blogit';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
       <Routes>
-      <Route path='/' element={[<Menubar/>,<Banner/>,<Aboutus/>,<Ourservices/>,<Credentials/>,<Insights/>, <Contact/>, <Footercard/>,<Footer/>]}/>
-      <Route path='/aboutuspage' element={[<Menubar/>,<AboutKggl/>,<Evolution/>,<Mission/>,<Whygeniuslabs/>,<Footercard/>,<Footerabout/>]}/> 
-      <Route path='/hr' element={[<Menubar/>,<Bannerhr/>,<Aboutpagehr/>,<Teamfeatures/>,<Sectors/>,<Clientpage/>,<Corevalues/>,<Footercard/>,<Hrfooter/>]}/>
-      <Route path='/blogs' element={[<Menubar/>,<Blogpreview/>]}/>
+      <Route path='/' element={[<Menubar/>,<Banner/>,<Aboutus/>,<Ourservices/>,<Credentials/>,<Insights/>,<Contactpages/>, <Footercard/>,<Footer/>]}/>
+      <Route path='/aboutus' element={[<Menubar/>,<AboutKggl/>,<Evolution/>,<Mission/>,<Whygeniuslabs/>,<Footercard/>,<Footerabout/>]}/> 
+      <Route path='/HR_Consultancy' element={[<Hrmenubar/>,<Bannerhr/>,<Aboutpagehr/>,<Teamfeatures/>,<Sectors/>,<Clientpage/>,<Corevalues/>,<Discover/>,<Footercard/>,<Hrfooter/>]}/>
+      <Route path='/blogs' element={[<Menubar/>,<Blogviewed/>]}/>
       <Route path='/imp' element={[<Sapimplementation/>,<Hanacloud/>,<Methodology/>,<Greenfield/>,<Newimplement/>,<Contactsap/>]}/>
       <Route path='/contact' element={[<Menubar/>,<Contactpage/>,<Footercard/>,<Footer/>]}/>
-      <Route path='/sapb' element={[<Sapmenubar/>,<Sapbanner/>]}/>
-      <Route path='/Digital Marketing' element={[<Menubar/>,<DMBanner/>,<Dmservice/>,<Adoptdm/>,<Dmcontact/>,<Footercard/>,<Footerdm/>]}/>
+      <Route path='/SAP_Services_Consultancy' element={[<Sapmenubar/>,<Sapbanner/>]}/>
+      <Route path='/IT_Services' element={[<BannerIT/>,<CardCarousel/>,<Itfooter/>]}/>
+      <Route path='/Digital_Marketing_Consultancy' element={[<Menubardm/>,<DMBanner/>,<Dmservice/>,<Adoptdm/>,<Dmblog/>,<Dmcontact/>,<Footercard/>,<Footerdm/>]}/>
+      <Route path='/Digital_Marketing_Blog' element={<Dmblogview/>}/>
+      <Route path='/Sap_blog' element={<Sapblogview/>}/>
+    <Route path='/IT_Blog' element={[<Menubar/>,<Blogit/>,<Footercard/>,<Footer/>]}/>
       </Routes>      
       </BrowserRouter>
     </div>

@@ -8,6 +8,11 @@
     margin: 50px;
 }
 
+.readbtn{
+    color: #fff;
+    background-color: transparent;
+    border :1px solid #fff;
+}
 @media (max-width:768px){
     .insightspart{
         margin: 0px;

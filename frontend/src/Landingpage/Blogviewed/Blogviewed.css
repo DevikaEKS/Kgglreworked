@@ -1,0 +1,16 @@
+.right-card {
+    margin-top: 100px !important;  
+}
+.lnkfnt{
+    text-decoration: none;
+    color: #291571;
+}
+.headblog{
+    color: #291571;
+}
+
+@media (max-width:768px){
+    .right-card {
+        margin-top: 0px !important;  
+    }    
+}

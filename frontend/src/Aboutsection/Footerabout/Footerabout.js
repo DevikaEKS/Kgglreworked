@@ -10,22 +10,24 @@ function Footerabout() {
   useEffect(() => {
     window.scrollTo(0, 0); 
   }, []);
+  const date = new Date();
+const year = date.getFullYear();
   return (
     <div className='container-fluid pt-5 footerbg px-5 '>  
       <div className='row'>
         <div className='col-sm-4 col-lg-2'>
           <h4>Quick Links</h4>
           <Link to="/" className="nav-link"><p>Home</p></Link>
-          <Sclink to="aboutpart" className="nav-link"><p>About Us</p></Sclink>  
-          <Link to="/ourservices" className="nav-link"><p>Services</p></Link>
+          <Link to="/aboutus" className="nav-link"><p>About Us</p></Link>  
+          <Link to="/" className="nav-link"><p>Services</p></Link>
           <Link to="/blogs" className="nav-link"><p>Blog</p></Link>
         </div>
         <div className='col-sm-4 col-lg-2'>
           <h4>Services</h4>
-          <Link to="/sapb" className="nav-link"><p>SAP Services</p></Link>
+          <Link to="/SAP_Services_Consultancy" className="nav-link"><p>SAP Services</p></Link>
           <p>IT Services</p>
-          <p>Digital Marketing Services</p>
-          <Sclink to="hrbanner" className="nav-link"><p>HR Consultancy</p></Sclink>
+         <Link to="/Digital_Marketing_Consultancy" className="nav-link"><p>Digital Marketing Services</p></Link> 
+          <Link to="/HR_Consultancy" className="nav-link"><p>HR Consultancy</p></Link>
         </div>
         <div className='col-sm-4 col-lg-2'>
   <h4>Our Branches</h4>
@@ -49,12 +51,12 @@ function Footerabout() {
       className='text-decoration-none text-light'
       target='_blank'
       rel='noopener noreferrer'>
-      <span className='d-block pt-5 h6'>Dubai</span>
+      <span className='d-block pt-sm-0 pt-md-5 h6'>Dubai</span>
       <span>Ideaspace Business Center, Millennium Executive Tower, Sheikh Zayed Road, Dubai, United Arab Emirates</span>
     </a>
   </p>
 </div>
-        <div className='mx-5 col-sm-4 col-lg-3'>
+        <div className='col-sm-4 col-lg-3'>
           <p>A Division of</p>
           <a href="https://www.kgisl.com/"><img src={kgisllogo} alt="KGISL Logo" className="kgisllogo" /></a> 
           <div className='d-flex flex-column justify-content-center'>
@@ -69,6 +71,7 @@ function Footerabout() {
           </div>
           </div>
         </div>
+        <p className='text-center py-1'>Copyright © {year}  KGGL. All Right Reserved.</p>
       </div>
     </div>
   );

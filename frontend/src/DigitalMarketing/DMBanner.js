@@ -1,14 +1,18 @@
 import React from 'react'
 import "./DMBanner.css";
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 function DMBanner() {
   return (
     <div className='container-fluid sapbannerpart' id='DMBanner'>
-        <div className='row p-sm-0 p-md-5'>
-<h1 className='dmheadertext'>Elevating performance marketing <br/>
-with our data-driven<br/>
-Digital marketing intuition</h1>
+        <div className='row p-sm-0 p-md-5 sapbannertext'>
+<h1 className='dmheadertext'>Elevating performance marketing
+with our data-driven
+Digital Marketing Intuition</h1>
 <p className='dmpara'>Consistent outcomes, innovative Strategies</p>
+
         </div>
     </div>
   )

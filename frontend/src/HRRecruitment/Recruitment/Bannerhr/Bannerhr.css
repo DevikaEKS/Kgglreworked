@@ -1,6 +1,5 @@
 .bannerbackground {
     background-image: url("../../Asset/Banner.jpg");
-    /* background-image: url("../../Asset/bannerpart.png"); */
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -43,3 +42,9 @@
       
     }
   }
+
+
+
+
+
+  

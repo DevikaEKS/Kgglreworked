@@ -18,12 +18,15 @@
 
 @media (max-width:426px){
     .sapbannertext h1{
-        font-size: 25px;
+        font-size: 30px;
     }
     .fnt{
         font-size: 18px;
         padding: 10px 0px;
         font-weight: 0px;
+    }
+    .linkhover{
+        font-size: 20px;
     }
 }
 
@@ -47,5 +50,7 @@
 .linkhover:hover {
     color: #ffff00; 
 }
-  
+
+
+
 

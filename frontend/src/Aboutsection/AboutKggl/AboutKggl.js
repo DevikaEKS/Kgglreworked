@@ -3,7 +3,7 @@ import React from 'react';
 import "./AboutKggl.css";
 function AboutKggl() {
   return (
-    <div className='container d-flex flex-column align-items-center justify-content-center whygl' id='aboutpart'>
+    <div className='container-fluid d-flex flex-column align-items-center justify-content-center whygl' id='aboutpart'>
       <div className='text-center paraabout'>
         <div className='row mx-2'>
           {/* First row with "Who" text and image responsive */}

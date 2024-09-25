@@ -11,10 +11,8 @@
 .privacytext{
     font-size: 14px;
     color: #291571;
-  }
+}
 
- 
-  
 .endpara{
 font-size: 58px;
 font-weight: 600;
@@ -31,7 +29,7 @@ font-weight: 600;
 }
 
 .contacttext{
-    color: #291571;   
+    color: #291571 !important;   
 }
 .contactpara{
     font-size: 18px;
@@ -51,7 +49,7 @@ font-weight: 600;
 
 .position-relative .dropdown-icon {
     position: absolute;
-    top: 70%;
+    top: 30%;
     right: 10px;
     transform: translateY(-50%);
     pointer-events: none; /* To make sure the icon doesn't interfere with the select element */
@@ -62,17 +60,8 @@ font-weight: 600;
     .contactpart{
        padding: 0px 70px !important;
     }
+    
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -136,3 +125,11 @@ font-weight: 600;
 
 
   
+  .error-message {
+    color: #dc3545; /* Bootstrap danger color */
+    font-size: 14px; /* Adjust font size */
+    margin-top: 5px; /* Space between dropdown and error message */
+    position: relative; /* Positioning the error message absolutely */
+    left: 0; /* Align to left */
+    top: 100%; /* Position it below the dropdown */
+}

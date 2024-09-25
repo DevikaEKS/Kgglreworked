@@ -1,7 +1,6 @@
 
 .bgdiscover {
-  background: url('../Asset/Rectangle\ 4374\ \(1\).png') ; 
-  background-size: cover; 
+ background: linear-gradient(#09091b,#291571);
   height: 100%;
 }
 

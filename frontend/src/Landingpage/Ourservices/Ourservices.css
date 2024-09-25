@@ -41,4 +41,35 @@
 }
 
 
+@media (max-width:426px){
+    .serviceheading{
+        font-size: 40px !important;
+    }
+    .servetext{
+        font-size: 40px !important;
+    }
+    .serviceheading::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 25px;
+        height: 5px;
+        background: linear-gradient(90deg, #291571 0%, #4E28D7 100%);
+        border-radius: 2px 0 0 0;
+    } 
+    .saptext{
+        font-size: 30px;
+        text-align: center;
+
+    }
+    .prt{
+        font-size: 20px;
+    /* background-image: linear-gradient(#D10D14, #6B060A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; */
+    }  
+}
+
 
