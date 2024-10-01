@@ -3,6 +3,10 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import './Contactpages.css';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 function Contactpages() {
   const [countryCodes, setCountryCodes] = useState([]);
@@ -15,7 +19,8 @@ function Contactpages() {
     description: '',
   });
   const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false); // Loading state
+  const [loading, setLoading] = useState(false);
+  const [requestType, setRequestType] = useState(""); // State for request type
 
   useEffect(() => {
     axios.get('https://restcountries.com/v3.1/all')
@@ -30,55 +35,97 @@ function Contactpages() {
       .catch(error => console.error('Error fetching country codes:', error));
   }, []);
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhoneNumber = (phoneNumber) => {
+    const phoneRegex = /^[0-9]{7,15}$/; // Adjusted to ensure the number is between 7 and 15 digits
+    return phoneRegex.test(phoneNumber);
+  };
+
+  const validateWebsite = (url) => {
+    const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/; 
+    return urlRegex.test(url);
+  };
   const validateForm = () => {
     const newErrors = {};
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const phoneRegex = /^[0-9]{3,15}$/;
-
-    if (!formData.email || !emailRegex.test(formData.email)) {
+    if (!requestType) {
+      newErrors.requestType = 'Please select a request type.'; // Ensure this is set
+    }
+    if (!formData.email || !validateEmail(formData.email)) {
       newErrors.email = 'Invalid email address.';
     }
-    if (!formData.phoneNumber || !phoneRegex.test(formData.phoneNumber)) {
-      newErrors.phoneNumber = 'Phone number must contain only numbers and be 7-15 digits long.';
+    if (!formData.phoneNumber || !validatePhoneNumber(formData.phoneNumber)) {
+      newErrors.phoneNumber = 'Enter Valid Phone Number';
     }
+    if (!formData.companyWebsite || !validateWebsite(formData.companyWebsite)) {
+      newErrors.companyWebsite = 'Please enter a valid website URL.';
+    }
+    
+    
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
+};
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    
+    // Validate fields on change
+    if (name === 'email') {
+      if (!validateEmail(value)) {
+        setErrors((prev) => ({ ...prev, email: 'Invalid email address.' }));
+      } else {
+        setErrors((prev) => ({ ...prev, email: undefined }));
+      }
+    }
+
+    if (name === 'phoneNumber') {
+      if (!validatePhoneNumber(value)) {
+        setErrors((prev) => ({ ...prev, phoneNumber: 'Enter Valid Phone Number' }));
+      } else {
+        setErrors((prev) => ({ ...prev, phoneNumber: undefined }));
+      }
+    }
+    if (name === 'companyWebsite') {
+      if (!validateWebsite(value)) {
+        setErrors((prev) => ({ ...prev, companyWebsite: 'Enter valid URL' }));
+      } else {
+        setErrors((prev) => ({ ...prev, companyWebsite: undefined }));
+      }
+    }
   };
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!validateForm()) return;
+
     const fullPhoneNumber = `${selectedCountryCode}${formData.phoneNumber}`;
 
-    // Get the request type from the select
-    const requestTypeId = document.getElementById("requestEmail").value;
-
-    // Combine all input values into an object
     const formValues = {
       email: formData.email,
       phno: fullPhoneNumber,
       company_name: formData.companyName,
       company_site: formData.companyWebsite,
       message: formData.description,
-      request_type_id: requestTypeId, // Include request_type_id
+      request_type_id: requestType,
     };
+    
     console.log(formValues);
 
-    // Validate the form
-    if (!validateForm()) return;
-
-    // Set loading state
     setLoading(true);
-
-    // Submit the form data
     axios.post('http://kggeniuslabs.com:4000/submit-form', formValues)
       .then(response => {
         if (response.data.message === "Form submitted successfully") {
           alert('Form submitted successfully!');
           resetForm();
-        }
-        else if (response.data.message === "Database error") {
-          alert("value it's not inserted")
+        } else if (response.data.message === "Database error") {
+          alert("Value not inserted");
         }
       })
       .catch(error => {
@@ -86,10 +133,9 @@ function Contactpages() {
         alert('An error occurred. Please try again later.');
       })
       .finally(() => {
-        setLoading(false); // Reset loading state
+        setLoading(false);
       });
   };
-
 
   const resetForm = () => {
     setFormData({
@@ -100,11 +146,8 @@ function Contactpages() {
       description: '',
     });
     setSelectedCountryCode('+91');
+    setRequestType(""); // Reset request type
     setErrors({});
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -113,23 +156,52 @@ function Contactpages() {
         <div className='row  py-4'>
           <div className='col-sm-12 col-md-6 d-flex align-items-center justify-content-center'>
             <div className='textcontact text-light'>
-            <h1 className='contactheading'>Let’s Connect</h1>
+            <h1 className='contactheading py-4'>Let’s Connect</h1>
             <p className='connectpara1 d-none d-md-block'>Explore how our customized IT solutions can elevate your business. Get in touch with our experts today!</p>
         
             </div>
           </div>
           <div className='col-sm-12 col-md-6'>
-            <form onSubmit={handleSubmit} className='bg-light p-3 rounded-3 mx-sm-0 mx-lg-5'>
+          <form onSubmit={handleSubmit} className='bg-light p-3 rounded-3 mx-sm-0 mx-lg-5'>
               <h4 className='contactheadertext mx-3'>Request a meeting with our experts</h4>
+              
               <div className="form-group m-3 position-relative">
-                <label htmlFor="requestEmail" className=' py-1'>Request Type</label>
-                <select id="requestEmail" className="form-control fc1" required>
-                  <option value="Select">Select</option>
-                  <option value="1">Contact Sales</option>
-                  <option value="2">General Inquiry</option>
-                  <option value="3">Partner Inquiry</option>
-                </select>
-                <FontAwesomeIcon icon={faCaretDown} className="dropdown-icon" />
+                <InputLabel id="request-type-label" className='contacttext'>Request Type</InputLabel>
+                <FormControl fullWidth error={Boolean(errors.requestType)} variant="outlined">
+  <Select
+    labelId="request-type-label"
+    id="request-type"
+    value={requestType}
+    onChange={(e) => {
+      setRequestType(e.target.value);
+      // Clear the error if a valid option is selected
+      if (e.target.value) {
+        setErrors((prev) => ({ ...prev, requestType: undefined }));
+      }
+    }}
+    required
+    sx={{
+      '& .MuiSelect-select': {
+        color: errors.requestType ? 'red' : '#291571', // Text color based on error
+      },
+      '& .MuiOutlinedInput-notchedOutline': {
+        borderColor: errors.requestType ? 'red' : '#291571', // Border color based on error
+      },
+      '&:hover .MuiOutlinedInput-notchedOutline': {
+        borderColor: '#291571', // Hover border color
+      },
+    }}
+  >
+    <MenuItem value="">
+      <em>Select</em>
+    </MenuItem>
+    <MenuItem value="1">Contact Sales</MenuItem>
+    <MenuItem value="2">General Inquiry</MenuItem>
+    <MenuItem value="3">Partner Inquiry</MenuItem>
+  </Select>
+  {/* Error message should be visible */}
+  {errors.requestType && <small className='text-danger' style={{ position: 'absolute', bottom: '-20px', left: '14px' }}>enter data</small>}
+</FormControl>
               </div>
 
               <div className='form-group m-3'>
@@ -194,38 +266,38 @@ function Contactpages() {
               <div className='form-group m-3'>
                 <label className='form-label'>Company Website</label>
                 <input
-                  type='text'
-                  id='webs'
+                  type='url'
+                  id='companywebsite'
                   className='form-control form-control1'
                   name='companyWebsite'
                   value={formData.companyWebsite}
                   onChange={handleChange}
+                  required
                 />
+                {errors.companyWebsite && <small className='text-danger'>{errors.companyWebsite}</small>}
               </div>
 
               <div className='form-group m-3'>
-                <label className='form-label'>Message</label>
+                <label className='form-label'>Description</label>
                 <textarea
-                  id='msg'
                   className='form-control form-control1'
                   name='description'
                   rows='3'
                   value={formData.description}
                   onChange={handleChange}
+                
                 ></textarea>
               </div>
 
-              <div className='d-flex justify-content-center mt-4'>
-                <input
+              <div className='d-flex justify-content-center m-3'>
+                <button
                   type='submit'
-                  className='contactbtn py-2 px-4 rounded-2 border border-0'
-                  value={loading ? 'Submitting...' : 'Submit'}
+                  className='btn btn-primary'
                   disabled={loading}
-                />
+                >
+                  {loading ? 'Submitting...' : 'Submit'}
+                </button>
               </div>
-              <p className='pt-3 privacytext ps-3 pe-1'>
-                The information you provide in this form will be used to process your request and keep you informed about our services, in line with KG Genius Lab's <span style={{ color: "#ed1c24" }}>Privacy Policy.</span>
-              </p>
             </form>
           </div>
         </div>

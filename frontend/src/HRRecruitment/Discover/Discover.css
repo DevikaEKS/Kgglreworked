@@ -24,10 +24,7 @@
 @media (max-width:769px){
   .bgdiscover {
     background-image: linear-gradient(#09091b,#291571) ;
-    padding: 10px 100px;
-    /* height: 50vh !important; */
-  }
-  
+  }  
 }
 
 

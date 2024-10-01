@@ -27,10 +27,10 @@
     font-weight: 400 !important;
     font-family: 'Proxima Nova', sans-serif;
     position: relative;
-    padding-left: 45px;
+  
     margin-bottom: 30px;
 }
-.aboutheading::before {
+/* .aboutheading::before {
     content: '';
     position: absolute;
     left: 0;
@@ -39,7 +39,7 @@
     height: 5px;
     background: linear-gradient(90deg, #291571 0%, #4E28D7 100%);
     border-radius: 2px 0 0 0;
-}
+} */
 
 .aboutimg{
     min-height: 320px;
@@ -55,7 +55,9 @@
         width: 300px; 
     }
     .aboutheading {
-        font-size: 24px !important;
+        font-size: 40px !important;
+        text-align: center !important;
+        padding-left: 0px;
     }
     .abouttext{
         font-size: 16px;

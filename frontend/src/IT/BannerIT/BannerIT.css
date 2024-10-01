@@ -1,10 +1,24 @@
-
 .sapbannerpart{
     background-image: url("../Asset/Frame\ 31.png");
     background-size: cover;
     color: #fff;
     background-repeat: no-repeat;
 }
+
+.sub-links {
+    padding: 10px 0;
+}
+.sub-links a {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+  
+  .sub-links a:hover {
+    text-decoration: underline;
+}
+
 .linkhover{
     text-decoration: none;
 } 
@@ -27,8 +41,18 @@
         font-weight: 0px;
     }
     .linkhover{
-        font-size: 24px;
+        font-size: 20px;
     }
+    .sub-links a{
+        font-size: 16px;
+    }
+    .headingIT{
+        text-align: center;
+}
+.welcome-message{
+    text-align: center;
+}
+    
 }
 
 .fnt{
@@ -40,7 +64,7 @@
 .active-link {
     color: #ffff00 !important;
     font-weight: 400;
-  }
+}
   
 .linkhover {
     color: #fff;
@@ -50,6 +74,40 @@
 .linkhover:hover {
     color: #ffff00; 
 }
+.headingIT{
+    color: #291571;
+    font-size: 40px;
+    font-weight: 600;
+    
+}
+.content-below-banner{
+    color: #291571; 
+}
+.itparagraph{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

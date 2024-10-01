@@ -2,7 +2,7 @@ import React from 'react'
 import "./Sapblog.css";
 import { useNavigate } from 'react-router-dom';
 import cardim1 from "../../Asset/blog.jpg";
-import cardim3 from "../../Sap/Asset/sapblog.jpg";
+import cardim3 from "../../Sap/Asset/hana.png";
 function Sapblog() {
     const navigate = useNavigate();
     const handleReadMoreClick = () => {
@@ -18,7 +18,7 @@ function Sapblog() {
             <div className="card-body">
               <h5 className="card-title">Planning SAP ECC to S/4HANA Conversion:
               </h5>
-              <button className='readbtn rounded-3 p-2'  onClick={handleReadMoreClick}>Read Post</button>
+              <button className='readbtn rounded-3 p-2'  onClick={handleReadMoreClick}>Read More</button>
               <div className='py-3'>
              
               </div>

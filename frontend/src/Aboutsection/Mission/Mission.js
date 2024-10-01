@@ -26,7 +26,7 @@ function Mission() {
               </h1>
             </div>
             <div className='heading-with-icon mt-5'>
-              <h3 className='credhead'>Mission</h3>
+              <h3 className='credhead text-center'>Mission</h3>
             </div>
             <p className='section-para'>
               KG Genius Labs is committed to driving business success through innovative IT solutions and expert consulting. Our mission is to deliver customized, forward-thinking services that not only meet our client's needs but also enhance their overall experience with us, guided by our core values of excellence and integrity.
@@ -47,7 +47,7 @@ function Mission() {
 
             
             <div className='heading-with-icon '>
-              <h3 className='credhead'>Vision</h3>
+              <h3 className='credhead text-center'>Vision</h3>
             </div>
             <p className='section-para '>
               Our vision at KG Genius Labs is to be a global leader in technology solutions, shaping the future of IT and digital transformation. We aspire to help businesses worldwide thrive by delivering groundbreaking solutions and fostering a culture of innovation and excellence.

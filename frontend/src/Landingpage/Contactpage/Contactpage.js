@@ -584,7 +584,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faLocation, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -743,15 +743,80 @@ function Contactpage() {
               <h3 className='endpara'>Conversation Today</h3>
               <p className='conversationpara'>
                 Are you eager to explore how <br />
-                <span className='endpara'>KG Genius<br /> Lab's</span><br />
+                <span className='endpara'>KG Genius Lab's</span><br />
                 comprehensive solutions can help you achieve your business goals?
               </p>
+<div  className=' d-none d-md-block'>
+              <h2><FontAwesomeIcon icon={faLocationDot} className="hovericon pe-2"/><b>Our Branches</b> </h2>
+              <div className='d-flex'>
+              <p className='conversationpara px-4'><a href='https://www.google.com/maps/place/KG+Genius+Labs/@11.0831794,76.9987774,15z/data=!4m6!3m5!1s0x2b66dd2813006db:0x8578e0607bb91ee0!8m2!3d11.0831794!4d76.9987774!16s%2Fg%2F11lp1km093?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D' className='text-decoration-none text-light'
+      target='_blank'
+      rel='noopener noreferrer'>Coimbatore
+       <span className='d-block mt-2 smlink'>
+      KGiSL Campus, 365 Thudiyalur Road, Saravanampatti, Coimbatore – 641035, Tamil Nadu, India.
+    </span>
+    </a>
+  </p>
+
+
+  <p className='px-5 conversationpara'><a
+      href='https://www.google.com/maps?q=Ideaspace+Business+Center,+Millennium+Executive+Tower,+Sheikh+Zayed+Road,+Dubai,+United+Arab+Emirates'
+      className='text-decoration-none text-light'
+      target='_blank'
+      rel='noopener noreferrer' >
+      Dubai</a>
+      <span className='d-block mt-2 smlink'>Ideaspace Business Center, Millennium Executive Tower, Sheikh Zayed Road, Dubai, United Arab Emirates</span></p>
+      </div>
+
+              </div>
             </div>
           </div>
           <div className='col-sm-12 col-md-6'>
             <form onSubmit={handleSubmit} className='bg-light p-3 rounded-3 mx-sm-0 mx-lg-5'>
               <h4 className='contactheadertext mx-3'>Request a meeting with our experts</h4>
               
+              <div className='form-group m-3'>
+                <label className='form-label'>WhatsApp Number</label>
+                <div className='input-group form-control1 rounded-2'>
+                  <select
+                    className='form-select'
+                    value={selectedCountryCode}
+                    onChange={e => setSelectedCountryCode(e.target.value)}
+                    style={{ width: "30%" }}
+                  >
+                    {countryCodes.map((country, index) => (
+                      <option key={index} value={country.code}>
+                        {country.name} ({country.code})
+                      </option>
+                    ))}
+                  </select>
+                  <input
+                    type='tel'
+                    id='whatsppnumber'
+                    className='form-control'
+                    placeholder='Enter your phone number'
+                    name='phoneNumber'
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                    style={{ width: "70%" }}
+                    required
+                    pattern="[0-9]*"
+                    maxLength="15"
+                  />
+                </div>
+                {errors.phoneNumber && <small className='text-danger'>{errors.phoneNumber}</small>}
+              </div>
+
+
+
+
+
+
+
+
+
+
+
               <div className="form-group m-3 position-relative">
                 <InputLabel id="request-type-label" className='contacttext'>Request Type</InputLabel>
                 <FormControl fullWidth error={Boolean(errors.requestType)} variant="outlined">
@@ -805,37 +870,7 @@ function Contactpage() {
                 {errors.email && <small className='text-danger'>{errors.email}</small>}
               </div>
 
-              <div className='form-group m-3'>
-                <label className='form-label'>WhatsApp Number</label>
-                <div className='input-group form-control1 rounded-2'>
-                  <select
-                    className='form-select'
-                    value={selectedCountryCode}
-                    onChange={e => setSelectedCountryCode(e.target.value)}
-                    style={{ width: "30%" }}
-                  >
-                    {countryCodes.map((country, index) => (
-                      <option key={index} value={country.code}>
-                        {country.name} ({country.code})
-                      </option>
-                    ))}
-                  </select>
-                  <input
-                    type='tel'
-                    id='whatsppnumber'
-                    className='form-control'
-                    placeholder='Enter your phone number'
-                    name='phoneNumber'
-                    value={formData.phoneNumber}
-                    onChange={handleChange}
-                    style={{ width: "70%" }}
-                    required
-                    pattern="[0-9]*"
-                    maxLength="15"
-                  />
-                </div>
-                {errors.phoneNumber && <small className='text-danger'>{errors.phoneNumber}</small>}
-              </div>
+              
 
               <div className='form-group m-3'>
                 <label className='form-label'>Company Name</label>

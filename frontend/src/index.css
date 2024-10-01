@@ -20,5 +20,10 @@ img {
   user-select: none;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+
 
 

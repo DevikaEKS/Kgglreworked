@@ -11,7 +11,7 @@ function Itfooter() {
     window.scrollTo(0, 0); 
   }, []);
   return (
-    <div className='container-fluid pt-5 footerbg px-5 '>  
+    <div className='container-fluid pt-5 footerbg px-5 text-start'>  
       <div className='row'>
         <div className='col-sm-4 col-lg-2'>
           <h4>Quick Links</h4>
@@ -19,11 +19,12 @@ function Itfooter() {
           <Link to="/aboutus" className="nav-link"><p>About Us</p></Link>  
           <Sclink to="ourservices" className="nav-link"><p>Services</p></Sclink>
           <Link to="/blogs" className="nav-link"><p>Blog</p></Link>
+          <Link to="/contact" className="nav-link"><p>Contact Us</p></Link>
         </div>
         <div className='col-sm-4 col-lg-2'>
           <h4>Services</h4>
           <Link to="/SAP_Services_Consultancy" className="nav-link"><p>SAP Services</p></Link>
-          <p>IT Services</p>
+          <Sclink to="ITbanner" className="nav-link"><p>IT Services</p></Sclink>
           <Link to="/Digital_Marketing_Consultancy" className="nav-link"><p> Digital Marketing Services</p></Link>
           
           <Link to="/HR_Consultancy" className="nav-link"><p>HR Consultancy</p></Link>
@@ -36,7 +37,7 @@ function Itfooter() {
       className='text-decoration-none text-light'
       target='_blank'
       rel='noopener noreferrer'> <b>Coimbatore</b>
-    <span className='d-block mt-2'>
+    <span className='d-none d-md-block mt-2'>
       KGiSL Campus, 365 Thudiyalur Road, Saravanampatti, Coimbatore – 641035, Tamil Nadu, India.
     </span>
     </a>
@@ -51,7 +52,7 @@ function Itfooter() {
       rel='noopener noreferrer'
     >
       <span className='d-block pt-sm-0 pt-md-5 h6'><b>Dubai</b></span>
-      <span>Ideaspace Business Center, Millennium Executive Tower, Sheikh Zayed Road, Dubai, United Arab Emirates</span>
+      <span className='d-none d-md-block '>Ideaspace Business Center, Millennium Executive Tower, Sheikh Zayed Road, Dubai, United Arab Emirates</span>
     </a>
   </p>
 </div>

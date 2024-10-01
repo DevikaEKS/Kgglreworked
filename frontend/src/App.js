@@ -19,7 +19,7 @@ import Sectors from './HRRecruitment/Recruitment/Sectors/Sectors';
 import Clientpage from './HRRecruitment/Recruitment/Clientpage/Clientpage';
 import Corevalues from './HRRecruitment/Recruitment/Corevalues/Corevalues';
 import {Evolution} from './Aboutsection/Evolution/Evolution';
-import Blogpreview from './Blogs/Blogpreview/Blogpreview';
+
 import Discover from './HRRecruitment/Discover/Discover';
 import Hrfootercard from './HRRecruitment/Hrfootercard/Hrfootercard';
 import Sapbanner from './Sap/Sapbanner/Sapbanner';
@@ -49,24 +49,36 @@ import Sapblogview from './Sap/Sapblogview/Sapblogview';
 import Contactpages from './Landingpage/Contactpages/Contactpages';
 import Blogviewed from './Landingpage/Blogviewed/Blogviewed';
 import Blogit from './IT/Blogit/Blogit';
+import Autopopup from './Landingpage/Autopopup/Autopopup';
+import CRM from './IT/CRM/CRM';
+import LMS from './IT/LMS/LMS';
+import Demobook from './IT/Demobook/Demobook';
+import Techstack from './IT/Techstack/Techstack';
+import Contactformit from './IT/Contactformit/Contactformit';
+import Crmdemobook from './IT/Demobook/Crmdemobook';
+import CRMSolutions from './IT/CRMSolutions/CRMSolutions';
+import ITMenubar from './IT/ITMenubar/ITMenubar';
+
 
 function App() {
   return (
     <div>
       <BrowserRouter>
       <Routes>
-      <Route path='/' element={[<Menubar/>,<Banner/>,<Aboutus/>,<Ourservices/>,<Credentials/>,<Insights/>,<Contactpages/>, <Footercard/>,<Footer/>]}/>
+      <Route path='/' element={[<Menubar/>,<Banner/>,<Aboutus/>,<Ourservices/>,<Credentials/>,<Insights/>,<Contactpages/>, <Footercard/>,<Footer/>,<Autopopup/>]}/>
       <Route path='/aboutus' element={[<Menubar/>,<AboutKggl/>,<Evolution/>,<Mission/>,<Whygeniuslabs/>,<Footercard/>,<Footerabout/>]}/> 
-      <Route path='/HR_Consultancy' element={[<Hrmenubar/>,<Bannerhr/>,<Aboutpagehr/>,<Teamfeatures/>,<Sectors/>,<Clientpage/>,<Corevalues/>,<Discover/>,<Footercard/>,<Hrfooter/>]}/>
-      <Route path='/blogs' element={[<Menubar/>,<Blogviewed/>]}/>
+      <Route path='/HR_Consultancy' element={[<Hrmenubar/>,<Bannerhr/>,<Aboutpagehr/>,<Teamfeatures/>,<Sectors/>,<Clientpage/>,<Corevalues/>,<Discover/>,<Footercard/>,<Hrfooter/>,<Autopopup/>]}/>
+      <Route path='/blogs' element={[<Menubar/>,<Blogviewed/>,<Footercard/>,<Footer/>]}/>
       <Route path='/imp' element={[<Sapimplementation/>,<Hanacloud/>,<Methodology/>,<Greenfield/>,<Newimplement/>,<Contactsap/>]}/>
       <Route path='/contact' element={[<Menubar/>,<Contactpage/>,<Footercard/>,<Footer/>]}/>
-      <Route path='/SAP_Services_Consultancy' element={[<Sapmenubar/>,<Sapbanner/>]}/>
-      <Route path='/IT_Services' element={[<BannerIT/>,<CardCarousel/>,<Itfooter/>]}/>
-      <Route path='/Digital_Marketing_Consultancy' element={[<Menubardm/>,<DMBanner/>,<Dmservice/>,<Adoptdm/>,<Dmblog/>,<Dmcontact/>,<Footercard/>,<Footerdm/>]}/>
+      <Route path='/SAP_Services_Consultancy' element={[<Sapmenubar/>,<Sapbanner/>,<Autopopup/>]}/>
+      <Route path='/IT_Services' element={[<ITMenubar/>,<BannerIT/>,<Autopopup/>]}/>
+      <Route path='/Digital_Marketing_Consultancy' element={[<Menubardm/>,<DMBanner/>,<Dmservice/>,<Adoptdm/>,<Dmblog/>,<Dmcontact/>,<Footercard/>,<Footerdm/>,<Autopopup/>]}/>
       <Route path='/Digital_Marketing_Blog' element={<Dmblogview/>}/>
       <Route path='/Sap_blog' element={<Sapblogview/>}/>
     <Route path='/IT_Blog' element={[<Menubar/>,<Blogit/>,<Footercard/>,<Footer/>]}/>
+    <Route path='/crm' element={[<CRM/>,<CRMSolutions/>,<Crmdemobook/>,<Techstack/>,<Contactformit/>,<Footercard/>,<Itfooter/>]}/>
+    <Route path='/lms' element={[<LMS/>,<Demobook/>,<Techstack/>,<Contactformit/>,<Footercard/>,<Itfooter/>]}/>
       </Routes>      
       </BrowserRouter>
     </div>

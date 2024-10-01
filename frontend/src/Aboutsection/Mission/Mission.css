@@ -25,21 +25,10 @@
     -webkit-background-clip: text; 
     font-weight: 600;
     position: relative;
-    margin-left: 10px;
     -webkit-text-fill-color: transparent;
-    padding-left: 45px;
     margin-bottom: 30px;
    } 
-   .credhead::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 35px;
-    height: 5px;
-    background: linear-gradient(90deg, #291571 0%, #4E28D7 100%);
-    border-radius: 2px 0 0 0;
-}
+ 
    .typewriter-cursor {
     display: none;
   }

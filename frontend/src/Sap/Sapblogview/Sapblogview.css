@@ -1,6 +1,6 @@
 .imsp{
-    max-height: 400px;
-    max-width: 500px;
+
+  max-width:600px
 }
 .inpbrd{
     border: 1px solid #291750;
@@ -24,6 +24,6 @@
 }
 @media(max-width:426px){
     .imsp{
-        height: 200px;
+        max-width: 300px !important;
     }
 }

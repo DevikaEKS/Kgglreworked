@@ -1,0 +1,8 @@
+input::placeholder {
+    color: #291571 !important; /* Change to your preferred color */
+   
+  }
+
+textarea::placeholder{
+    color: #291571 !important;  
+}

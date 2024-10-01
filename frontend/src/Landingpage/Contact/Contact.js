@@ -72,7 +72,7 @@ function Contact() {
       <div className='container'>
         <div className="row justify-content-center align-items-center">
           <div className="col-sm-12 col-md-6 text-light">
-            <h1 className='contactheading'>Let’s Connect</h1>
+            <h1 className='contactheading py-'>Let’s Connect</h1>
             <p className='connectpara'>Explore how our customized IT solutions can elevate your business. Get in touch with our experts today!</p>
           </div>
           <div className="col-sm-12 col-md-6">
