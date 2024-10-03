@@ -75,45 +75,49 @@ function Sapbanner() {
 
 
 
-<div className='d-none d-md-block'>
-                <div className='d-flex flex-column flex-lg-row justify-content-start fnt '>
-                  <div className='col-sm-12 col-lg-7'>
-                  <Link
-                    to="#"
-                    onClick={() => handleLinkClick('s4hana')}
-                    className={`linkhover ${selectedSection === 's4hana' ? 'active-link' : ''}`}>
-                    S/4HANA Implementations <FontAwesomeIcon icon={faAngleRight} />
-                  </Link>
-                  </div>
-                  <div className='col-sm-12 col-lg-5'>
-                  <Link
-                    to="#"
-                    onClick={() => handleLinkClick('support')}
-                    className={`linkhover   ${selectedSection === 'support' ? 'active-link' : ''}`}>
-                    SAP Support Services <FontAwesomeIcon icon={faAngleRight} />
-                  </Link>
-                </div>
-                </div>
-                <div className='d-flex flex-column flex-lg-row justify-content-start fnt d-none d-md-block'>
-                  <div className='col-sm-12 col-lg-7'>
-                  <Link
-                    to="#"
-                    onClick={() => handleLinkClick('data')}
-                    className={`linkhover  ${selectedSection === 'data' ? 'active-link' : ''}`} >
-                    Data & Analytics <FontAwesomeIcon icon={faAngleRight} />
-                  </Link>
-                  </div>
-                  <div className='col-sm-12 col-lg-5 '>
-                  <Link
-                    to="#"
-                    onClick={() => handleLinkClick('valueAdded')}
-                    className={`linkhover ${selectedSection === 'valueAdded' ? 'active-link' : ''}`}>
-                    Value Added Solutions <FontAwesomeIcon icon={faAngleRight} />
-                  </Link>
-                  </div>
-                  </div>
-                </div>
-              </div>
+                <div className='d-none d-md-block'>
+  <div className='row'>
+    <div className='col-md-6 text-start'>
+      <Link
+        to="#"
+        onClick={() => handleLinkClick('s4hana')}
+        className={`linkhover ${selectedSection === 's4hana' ? 'active-link' : ''}`}>
+        S/4HANA Implementations <FontAwesomeIcon icon={faAngleRight} />
+      </Link>
+    </div>
+
+    <div className='col-md-6'>
+      <Link
+        to="#"
+        onClick={() => handleLinkClick('support')}
+        className={`linkhover ${selectedSection === 'support' ? 'active-link' : ''}`}>
+        SAP Support Services <FontAwesomeIcon icon={faAngleRight} />
+      </Link>
+    </div>
+  </div>
+
+  <div className='row mt-3'>
+
+    <div className='col-md-6 text-start'>
+      <Link
+        to="#"
+        onClick={() => handleLinkClick('data')}
+        className={`linkhover ${selectedSection === 'data' ? 'active-link' : ''}`}>
+        Data & Analytics <FontAwesomeIcon icon={faAngleRight} />
+      </Link>
+    </div>
+ 
+    <div className='col-md-6 '>
+      <Link
+        to="#"
+        onClick={() => handleLinkClick('valueAdded')}
+        className={`linkhover ${selectedSection === 'valueAdded' ? 'active-link' : ''}`}>
+        Value Added Solutions <FontAwesomeIcon icon={faAngleRight} />
+      </Link>
+    </div>
+  </div>
+</div>
+</div>
             </div>
           </div>
         </div>

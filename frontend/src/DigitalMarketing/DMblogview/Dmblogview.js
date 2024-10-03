@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import "./Dmblogview.css";
-import dmblogim from "../Asset/blogpart.jpg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import dmblogim from "../Asset/seoi.jpeg";
 import Footercard from '../../Landingpage/Footercard/Footercard';
 import Footer from '../../Landingpage/Footer/Footer';
 import Menubar from '../../Landingpage/Menubar/Menubar';
@@ -12,13 +9,11 @@ import dmblg3 from "../Asset/Businessman.png";
 import axios from 'axios';
 
 function Dmblogview() {
-  const navigate = useNavigate();
+
   const [url, setUrl] = useState('');
   const [error, setError] = useState('');
 
-  const handlesappage = () => {
-    navigate('/');
-  };
+ 
 
 
   const validateURL = (inputURL) => {
@@ -82,8 +77,7 @@ function Dmblogview() {
 
         <div className='col-sm-12 col-md-4'>
           <div className='card p-4 shadowcard'>
-            <h4 className='rqtxt'>Free SEO Audit</h4>
-
+            <h4 className='rqtxt py-3'>Free SEO Audit</h4>
             <form onSubmit={handleSubmit}>
               <input
                 type='url'
@@ -97,7 +91,11 @@ function Dmblogview() {
               />
               {error && <p style={{ color: 'red' }}>{error}</p>}
               <br />
-              <input type='submit' className='subbtnclr' value='Submit' />
+              <div >
+                <input type='email' className='form-control form-control1'  placeholder='Enter your email'/>
+
+              </div>
+              <input type='submit' className='subbtnclr rounded-2' value='Submit' />
             </form>
           </div>
 
@@ -106,14 +104,14 @@ function Dmblogview() {
             <div className='card shadowcard my-4'>
               <img src={dmblg3} alt="Latest Update" className='card-img-top' />
               <div className='card-body'>
-                <h5 className='card-title'>What benefits does organic conversion provide for businesses?</h5>
+                <h5 className='card-title'><b>What benefits does organic conversion provide for businesses?</b></h5>
               </div>
             </div>
 
             <div className='card shadowcard my-4'>
               <img src={dmblg2} alt="Latest Update" className='card-img-top' />
               <div className='card-body'>
-                <h5 className='card-title'>The benefits of social media marketing in business</h5>
+                <h5 className='card-title'><b>The benefits of social media marketing in business</b></h5>
               </div>
             </div>
           </div>

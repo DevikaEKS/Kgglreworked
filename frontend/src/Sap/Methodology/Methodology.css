@@ -5,28 +5,27 @@
 }
 
 
-/* Hide method3 (for mobile) by default */
 .method-mobile {
     display: none;
   }
   
-  /* Show method3 for small devices */
-  @media (max-width: 767px) {
+
+@media (max-width: 767px) {
     .method-desktop {
-      display: none; /* Hide method2 (desktop) on small screens */
+      display: none; 
     }
     .method-mobile {
       display: block;
     }
   }
   
-  /* For larger devices (method2) */
-  @media (min-width: 768px) {
+
+@media (min-width: 768px) {
     .method-desktop {
       display: block;
     }
     .method-mobile {
-      display: none; /* Hide method3 on larger screens */
+      display: none;
     }
   }
   

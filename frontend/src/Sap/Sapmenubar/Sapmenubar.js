@@ -3,8 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link as RouterLink } from 'react-router-dom'; // Renamed to avoid conflict with react-scroll's Link
-import { Link as ScrollLink } from "react-scroll"; // For scrolling
+import { Link as RouterLink } from 'react-router-dom'; 
+import { Link as ScrollLink } from "react-scroll";
 import logo from "../../Asset/Logo Tagline-02 (1).png";
 import "./Sapmenubar.css";
 
@@ -33,13 +33,12 @@ function Sapmenubar() {
             <Nav.Link as={RouterLink} to="/blogs" className='navtext px-3' onClick={handleSelect}>Blog</Nav.Link>
           </Nav>
           <Nav className='ms-auto'>
-            {/* Using ScrollLink from react-scroll for smooth scrolling */}
             <ScrollLink
-              to="sapcontact"  // ID of the contact section
+              to="sapcontact"  
               smooth={true}
               duration={500}
               className='contactbutton px-3 py-2 rounded-1 text-decoration-none'
-              onClick={() => setExpanded(false)} // Close navbar when clicking link
+              onClick={() => setExpanded(false)} 
             >
               Contact Us
             </ScrollLink>

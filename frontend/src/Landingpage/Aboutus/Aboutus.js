@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Aboutus() {
   return (
-    <div className='container textclr' id='About'>
+    <div className='container textclr'>
         <div className='row abpart'>
             <div className='col-sm-12 col-md-6 textclr about-title me-sm-0 me-lg-5'>
             <div className='aboutpart'>
@@ -26,11 +26,9 @@ partner for forward-thinking business collaborations.</p>
     title='About KG Genius Labs' 
     alt='We empower businesses with advanced IT infrastructure solutions that fuel growth and success. Focused on innovation, we provide tailored services designed to meet diverse client needs' 
     className='aboutimg' 
+    height={400} width={600}
   />
 </div>
-
-
-
         </div>
     </div>
   )

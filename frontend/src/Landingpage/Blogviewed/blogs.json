@@ -2,21 +2,21 @@
   {
       "id": 1,
       "title": "Top 10 SEO strategies for a business",
-      "image": "/Asset/seoim.png",
+      "image": "/Asset/seoi.jpeg",
       "path": "/Digital_Marketing_Blog",
       "sub": "DM"
   },
   {
       "id": 2,
       "title": "Guide for SAP ECC to S/4HANA Conversion",
-      "image": "/Asset/hana.png",
+      "image": "/Asset/han.jpeg",
       "path": "/Sap_blog",
       "sub": "SAP"
   },
   {
       "id": 3,
       "title": "The Importance of CRM for Business",
-      "image": "/Asset/crm.png",
+      "image": "/Asset/crm.webp",
       "path": "/IT_Blog",
       "sub": "IT"
   }

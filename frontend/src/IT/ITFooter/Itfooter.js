@@ -59,7 +59,7 @@ function Itfooter() {
 
         <div className='col-sm-4 col-lg-3'>
           <p>A Division of</p>
-          <a href="https://www.kgisl.com/"><img src={kgisllogo} alt="KGISL Logo" className="kgisllogo" /></a> 
+          <a href="https://www.kgisl.com/"><img src={kgisllogo} title='KGiSL' alt="KGISL Logo" className="kgisllogo" height={50} width={150} /></a> 
           <div className='d-flex flex-column justify-content-center'>
           <div>
           <p className='mt-3'>Follow Us on</p>                                                                                    

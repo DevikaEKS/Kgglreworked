@@ -1,11 +1,6 @@
-
-
-
-
-
 import React from 'react';
 import sapsupportim from "../Asset/supportsap.png";
-import "./Sapsupport.css"; // Use this for custom styles if needed
+import "./Sapsupport.css"; 
 
 function Sapsupport() {
   return (

@@ -27,12 +27,10 @@ function Methodology() {
         </div>
       </div>
 
-      {/* method2 for large devices */}
       <div className='row mx-3 my-5 py-5 d-none d-md-block'>
         <img src={method2} className='method-desktop d-block mx-auto' title='SAP S/4HANA Implementation' alt="SAP S/4HANA with Active Methodology Steps"/>
       </div>
 
-      {/* method3 for small devices */}
       <div className='row mx-3 my-5 py-5 d-block d-md-none'>
         <img src={method3} className='method-mobile d-block mx-auto' title='SAP S/4HANA Implementation' alt="SAP S/4HANA with Active Methodology Steps"/>
       </div>

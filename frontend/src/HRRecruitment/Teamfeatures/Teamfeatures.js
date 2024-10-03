@@ -3,7 +3,6 @@ import "./Teamfeatures.css";
 import teamimg1 from "../Asset/working-with-blueprint.jpg";
 import teamimg2 from "../Asset/Team 3.jpg";
 import teamimg3 from "../Asset/successful-medical-team.jpg";
-
 function Teamfeatures() {
   return (
     <div className='container-fluid bgforteam py-5' id='team'>

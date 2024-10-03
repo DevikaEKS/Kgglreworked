@@ -6,3 +6,7 @@ input::placeholder {
 textarea::placeholder{
     color: #291571 !important;  
 }
+
+.letstext{
+  color: #291571 !important;  
+}

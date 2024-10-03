@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Dmblog.css";
-import cardim1 from "../Asset/seoim.png";
+import cardim1 from "../Asset/seoi.jpeg";
 
 function Dmblog() {
   const navigate = useNavigate();
@@ -14,13 +14,13 @@ function Dmblog() {
         <h1 className='text-center blogheading mb-5'>Additional Insights</h1>
         <div className='col-sm-12 col-lg-4'>
           <div className="card colourcard text-light my-3">
-            <img src={cardim1} alt="Card image" className="card-img-top" />
+            <img src={cardim1} title='Digital Marketing' alt="Top 10 SEO strategies for a business " className="card-img-top" />
             <div className="card-body">
               <h5 className="card-title">
                 Top 10 SEO strategies for a business 
               </h5>
               <button 
-                className="border border-2 rounded-5 p-2  text-decoration-none my-4"
+                className="readbtn rounded-3 p-2"
                 onClick={handleReadMoreClick} >
                 Read More
               </button>

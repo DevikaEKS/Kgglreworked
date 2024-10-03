@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react'; 
 import { Link, useNavigate } from 'react-router-dom';
-import blogsData from './blogs.json'; // Adjust the path to your JSON file
+import blogsData from './blogs.json'; 
 import "./Blogviewed.css";
 
 function Blogviewed() {
     const navigate = useNavigate();
     const [blogs, setBlogs] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState('All'); // Track selected category
+    const [selectedCategory, setSelectedCategory] = useState('All'); 
 
-    // Fetch data from the JSON file
+ 
     useEffect(() => {
         setBlogs(blogsData); 
     }, []);
 
     const handleCardClick = (path) => {
-        navigate(path); // Navigate to the specified path
+        navigate(path); 
     };
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category); // Set the selected category
     };
 
-    // Filter blogs based on selected category using the 'sub' property
+   
     const filteredBlogs = selectedCategory === 'All' 
         ? blogs 
         : blogs.filter(blog => blog.sub === selectedCategory);
@@ -59,7 +59,7 @@ function Blogviewed() {
                 </div>
             </div>
 
-            {/* Blog Cards */}
+    
             <div className='row'>
                 {filteredBlogs.map((blog, index) => (
                     <div
@@ -68,7 +68,7 @@ function Blogviewed() {
                         <div className='card shadowcard my-4' onClick={() => handleCardClick(blog.path)}>
                             <img src={blog.image} alt={blog.title} className='card-img-top' />
                             <div className='card-body'>
-                                <h5 className='card-title'>{blog.title}</h5>
+                                <h5 className='card-title'><b>{blog.title}</b></h5>
                                
                             </div>
                         </div>

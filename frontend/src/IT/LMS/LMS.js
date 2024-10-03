@@ -10,7 +10,7 @@ function LMS() {
      <p className='lmspara'>Our LMS solutions make training and education simple, effective, and accessible. We create flexible learning platforms that support online courses, certifications, and employee training programs, all tailored to meet your organization's specific needs.</p> 
      <div className='row my-5'>
         <div className='col-sm-12 col-lg-5 brdside text-center'>
-            <img src={feat1} className='lmsim1'/>
+            <img src={feat1} alt='Current Challenges in Digital Learning' className='lmsim1'/>
 <h1 className='lmsfeatures py-4'>Current Challenges in Digital Learning</h1>
         </div>
         <div className='col-sm-12 col-lg-7'>
@@ -36,16 +36,15 @@ function LMS() {
             </ul>
         </div>
         <div className='col-sm-12 col-lg-5 text-center order-1 order-lg-2'>
-           <img src={feat2} className='lmsim1'/>
+           <img src={feat2} alt='A Platform Built for Success' className='lmsim1'/>
            <h1 className='lmsfeatures'>A Platform Built for Success</h1>
         </div>
      </div>
 
 
      <div className='row my-5'>
-        <div className='col-sm-12 col-lg-5 brdside text-center'>
-        
-        <img src={feat3} className='lmsim1'/>
+        <div className='col-sm-12 col-lg-5 brdside text-center'>  
+        <img src={feat3} alt='Features of LMS' className='lmsim1'/>
         <h1  className='lmsfeatures'>Features</h1>
         </div>
         <div className='col-sm-12 col-lg-7 '>

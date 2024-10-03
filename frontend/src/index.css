@@ -5,6 +5,7 @@ body, html {
   overflow-x: hidden; 
   user-select: none;
   font-family: 'Proxima Nova', sans-serif !important;
+  font-display: swap;
 }
 
 img {

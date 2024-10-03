@@ -1,21 +1,15 @@
 import React from 'react'
 import "./Blogit.css";
-import dmblogim from "../Asset/CRM.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import dmblogim from "../Asset/crm.webp";
 import lms from "../Asset/LMS.png";
 import mbapp from "../Asset/applications.png";
 function Blogit() {
-    const navigate = useNavigate(); 
-    const handlesappage = () => {
-        navigate('/'); 
-    };
+  
   return (
     <div className='container blogpartcontent'>
         <div className='row my-4'>
            <div className='col-sm-12 col-md-7'>
-            <h4 className=' py-3'>The Importance of CRM for Business: Enhancing Customer Relationships and Driving Growth
+            <h4 className=' py-3'><b>The Importance of CRM for Business: Enhancing Customer Relationships and Driving Growth</b>
             </h4>
             <div className='d-flex justify-content-center'>
             <img src={dmblogim} alt='Seo Strategies' className='imsp py-3'/>
@@ -61,20 +55,19 @@ function Blogit() {
         </div>
       
         <div className='col-sm-12 col-lg-4 my-5'>
-                   
                     <div>
                     <h4 className='my-4'><b>Latest Updates</b></h4>
                         <div className='card shadowcard my-2'>
     <img src={lms}  alt="Latest Update" className='card-img-top' />
     <div className='card-body'>
-        <h5 className='card-title'>Leveraging Learning Management Systems (LMS) for Modern Education and Training</h5> 
+        <h5 className='card-title'><b>Leveraging Learning Management Systems (LMS) for Modern Education and Training</b></h5> 
     </div>
 </div>
 
 <div className='card shadowcard my-2'>
     <img src={mbapp}  alt="Latest Update" className='card-img-top' />
     <div className='card-body'>
-        <h5 className='card-title'>The Power of Mobile Applications: Transforming the Digital Landscape</h5>    
+        <h5 className='card-title'><b>The Power of Mobile Applications: Transforming the Digital Landscape</b></h5>    
     </div>
 </div>
 </div>

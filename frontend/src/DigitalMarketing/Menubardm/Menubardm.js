@@ -33,13 +33,13 @@ function Menubardm() {
             <Nav.Link as={RouterLink} to="/blogs" className='navtext px-3' onClick={handleSelect}>Blog</Nav.Link>
           </Nav>
           <Nav className='ms-auto'>
-            {/* Using ScrollLink from react-scroll for smooth scrolling */}
+           
             <ScrollLink
               to="dmcontact"  // ID of the contact section
               smooth={true}
               duration={500}
               className='contactbutton px-3 py-2 rounded-1 text-decoration-none'
-              onClick={() => setExpanded(false)} // Close navbar when clicking link
+              onClick={() => setExpanded(false)} 
             >
               Contact Us
             </ScrollLink>

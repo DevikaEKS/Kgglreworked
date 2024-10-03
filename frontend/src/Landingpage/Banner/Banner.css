@@ -1,12 +1,12 @@
 .carousel-caption-centered {
   position: absolute;
-  top: 40%; /* Center vertically */
-  left: 3% !important; /* Align text to the left edge */
-  transform: translateY(-50%); /* Adjust vertical centering */
+  top: 40%; 
+  left: 3% !important; 
+  transform: translateY(-50%); 
   text-align: left !important;
-  background-color: transparent; /* Optional: Add a semi-transparent background */
-  padding-left: 20px; /* Optional: Add padding from the left edge */
-  max-width: 800px; /* Optional: Limit the width of the text container */
+  background-color: transparent; 
+  padding-left: 20px; 
+  max-width: 800px; 
 }
 
 .carousel-item img {
@@ -123,7 +123,11 @@
   font-size: 58px;
   font-weight: 600;
 }
-
+.carousel-caption img {
+  width: 100%; 
+  height: auto;
+  aspect-ratio: 16/9; 
+}
 
 
 @media (max-width:426px){
@@ -229,11 +233,11 @@
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 5%; /* Adjust this value as needed */
+  width: 5%; 
 }
 
 .carousel-control-prev {
-  left: 0; /* Align to the left */
+  left: 0; 
   right: auto; /* Remove default right positioning */
 }
 
@@ -245,5 +249,4 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   color: red;
-   /* Optional: add a background color to the icons */
 }

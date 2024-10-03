@@ -30,20 +30,11 @@
   
     margin-bottom: 30px;
 }
-/* .aboutheading::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 35px;
-    height: 5px;
-    background: linear-gradient(90deg, #291571 0%, #4E28D7 100%);
-    border-radius: 2px 0 0 0;
-} */
+
 
 .aboutimg{
-    min-height: 320px;
-    min-width: 320px;
+    height: 350px;
+    width: 350px;
 }
 
 @media (max-width:768px){

@@ -6,7 +6,6 @@ import LMS from '../LMS/LMS';
 import Crmdemobook from '../Demobook/Crmdemobook';
 import "./BannerIT.css"
 import Footercard from '../../Landingpage/Footercard/Footercard';
-import Footer from '../../Landingpage/Footer/Footer';
 import Techstack from '../Techstack/Techstack';
 import Demobook from '../Demobook/Demobook';
 import Contactformit from '../Contactformit/Contactformit';
@@ -22,15 +21,6 @@ function BannerIT() {
   const [selectedComponent, setSelectedComponent] = useState(null);
   const [showSubLinks, setShowSubLinks] = useState(false);
 
-  // const handleMainLinkClick = (section) => {
-  //   if (section === 's4hana') {
-  //     setShowSubLinks(!showSubLinks); 
-  //   } else {
-  //     setShowSubLinks(false); 
-  //     setSelectedComponent(null); 
-  //   }
-  // };
-
   const handleMainLinkClick = (section) => {
     if (section === 's4hana') {
       setShowSubLinks(!showSubLinks); 
@@ -44,12 +34,9 @@ function BannerIT() {
     }
   };
   
-  
-
   const handleSubLinkClick = (component) => {
     setSelectedComponent(component); 
   };
-
   return (
     <>
       <div>
@@ -88,35 +75,11 @@ function BannerIT() {
   - Customer Relationship Management (CRM)
 </Link>
 
-
-
-
-
-
-
-                        {/* <Link 
-                          to="#"
-                          onClick={() => handleSubLinkClick('lms')} 
-                          className="d-block text-decoration-none crmtext">
-                          - Learning Management System (LMS)
-                        </Link>
-                        <Link 
-                          to="#"
-                          onClick={() => handleSubLinkClick('crm')} 
-                          className="d-block text-decoration-none crmtext">
-                          - Customer Relationship Management (CRM)
-                        </Link> */}
                       </div>
                     )}
                   </div>
 
                   <div className='col-sm-12 col-lg-5'>
-                    {/* <Link
-                      to="#"
-                      onClick={() => handleMainLinkClick('support')}
-                      className={`linkhover ${selectedComponent === 'support' ? 'active-link' : ''}`}>
-                      Bespoke Applications <FontAwesomeIcon icon={faAngleRight} />
-                    </Link> */}
                     <Link
   to="#"
   onClick={() => handleMainLinkClick('support')}
@@ -161,9 +124,9 @@ function BannerIT() {
           {selectedComponent === 'lms' && (
             <>
               <LMS />
+              <Demobook/>
               <Techstack/>
               <InsightsIT/>
-              <Demobook/>
               <Contactformit/>
               <Footercard />
               <Itfooter/>
@@ -175,9 +138,9 @@ function BannerIT() {
             <>
               <CRM/>
               <CRMSolutions/>
+              <Crmdemobook />
               <Techstack/>
               <InsightsIT/>
-              <Crmdemobook />
               <Contactformit/>
               <Footercard />
               <Itfooter/>

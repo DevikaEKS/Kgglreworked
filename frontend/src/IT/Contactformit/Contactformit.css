@@ -16,6 +16,7 @@
     background-image: linear-gradient(#09091B,#291571);
 }
 
+
 @media (max-width:768px){
     .sapcontacthead{
         font-size: 28px;
