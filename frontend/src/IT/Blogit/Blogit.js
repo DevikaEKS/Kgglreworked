@@ -1,13 +1,13 @@
 import React from 'react'
 import "./Blogit.css";
-import dmblogim from "../Asset/crm.webp";
+import dmblogim from "../Asset/crmblog.jpg";
 import lms from "../Asset/LMS.png";
 import mbapp from "../Asset/applications.png";
 function Blogit() {
   
   return (
     <div className='container blogpartcontent'>
-        <div className='row my-4'>
+        <div className='row my-4 mx-3'>
            <div className='col-sm-12 col-md-7'>
             <h4 className=' py-3'><b>The Importance of CRM for Business: Enhancing Customer Relationships and Driving Growth</b>
             </h4>

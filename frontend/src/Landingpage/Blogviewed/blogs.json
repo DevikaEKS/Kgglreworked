@@ -16,8 +16,15 @@
   {
       "id": 3,
       "title": "The Importance of CRM for Business",
-      "image": "/Asset/crm.webp",
+      "image": "/Asset/crmblog.jpg",
       "path": "/IT_Blog",
       "sub": "IT"
-  }
+  },
+  {
+    "id": 4,
+    "title": "RISE with SAP, GROW with SAP, and SAP S/4HANA.",
+    "image": "/Asset/textsap.png",
+    "path": "/Sap_blog1",
+    "sub": "SAP"
+}
 ]

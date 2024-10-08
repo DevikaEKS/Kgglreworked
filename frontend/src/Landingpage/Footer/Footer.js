@@ -2,7 +2,7 @@ import React,{useEffect} from 'react';
 import kgisllogo from '../../Asset/kgisl-logo.png';
 import "./Footer.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faLinkedin, faSquareXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faLinkedin, faSquareXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import { Link as Sclink } from "react-scroll";
 
@@ -25,11 +25,11 @@ const year = date.getFullYear();
           <Link to="/blogs" className="nav-link"><p>Blog</p></Link>
           <Link to="/contact" className="nav-link"><p>Contact Us</p></Link>
         </div>
-        <div className='col-sm-4 col-lg-2'>
+        <div className='col-sm-4 col-lg-3'>
           <h4><b>Services</b></h4>
           <Link to="/SAP_Services_Consultancy" className="nav-link"><p>SAP Services</p></Link>
           <Link to="/IT_Services" className="nav-link"><p>IT Services</p></Link> 
-          <Link to="/Digital_Marketing_Consultancy" className="nav-link"><p> Digital Marketing Services</p></Link>
+          <Link to="/Digital_Marketing_Consultancy" className="nav-link"><p>Digital Marketing Services</p></Link>
           
           <Link to="/HR_Consultancy" className="nav-link"><p>HR Consultancy</p></Link>
         </div>
@@ -73,6 +73,7 @@ const year = date.getFullYear();
           <a href="https://www.instagram.com/kggeniuslabs/"><FontAwesomeIcon icon={faInstagram} className="text-white mx-2"></FontAwesomeIcon></a>
           <a href="https://www.linkedin.com/company/kg-geniuslabs/"><FontAwesomeIcon icon={faLinkedin} className="text-white mx-2"></FontAwesomeIcon></a>
           <a href='https://x.com/KGGeniusLabs'><FontAwesomeIcon icon={faSquareXTwitter} className="text-white mx-2"></FontAwesomeIcon></a>
+          <a href='https://www.youtube.com/@kgislgeniuslabs'><FontAwesomeIcon icon={faYoutube} className="text-white mx-2"/></a>
           </div>
           </div>
         </div>

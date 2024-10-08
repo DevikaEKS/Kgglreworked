@@ -8,7 +8,6 @@ function Blogviewed() {
     const [blogs, setBlogs] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('All'); 
 
- 
     useEffect(() => {
         setBlogs(blogsData); 
     }, []);
@@ -21,37 +20,35 @@ function Blogviewed() {
         setSelectedCategory(category); // Set the selected category
     };
 
-   
     const filteredBlogs = selectedCategory === 'All' 
         ? blogs 
         : blogs.filter(blog => blog.sub === selectedCategory);
 
     return (
         <div className='container-fluid'>
-            {/* Category Filter Options */}
             <h1 className='text-center headblog mb-5'><b>Additional Insights</b></h1>
             <div className='row m-4'>
-                <div className='col d-flex flex-wrap justify-content-evenly border-bottom'>
+                <div className='col d-flex flex-column flex-md-row justify-content-md-evenly border-bottom text-start'>
                     <Link
-                        className={`lnkfnt ${selectedCategory === 'All' ? 'active' : ''} col-12 col-md-auto text-center mb-2 mb-md-0`}
+                        className={`lnkfnt ${selectedCategory === 'All' ? 'active' : ''} col-12 col-md-auto text-start mb-2 mb-md-0`}
                         onClick={() => handleCategoryClick('All')}
                     >
                         All
                     </Link>
                     <Link
-                        className={`lnkfnt ${selectedCategory === 'SAP' ? 'active' : ''} col-12 col-md-auto text-center mb-2 mb-md-0`}
+                        className={`lnkfnt ${selectedCategory === 'SAP' ? 'active' : ''} col-12 col-md-auto text-start mb-2 mb-md-0`}
                         onClick={() => handleCategoryClick('SAP')}
                     >
                         SAP
                     </Link>
                     <Link
-                        className={`lnkfnt ${selectedCategory === 'IT' ? 'active' : ''} col-12 col-md-auto text-center mb-2 mb-md-0`}
+                        className={`lnkfnt ${selectedCategory === 'IT' ? 'active' : ''} col-12 col-md-auto text-start mb-2 mb-md-0`}
                         onClick={() => handleCategoryClick('IT')}
                     >
                         IT Services
                     </Link>
                     <Link
-                        className={`lnkfnt ${selectedCategory === 'DM' ? 'active' : ''} col-12 col-md-auto text-center mb-2 mb-md-0`}
+                        className={`lnkfnt ${selectedCategory === 'DM' ? 'active' : ''} col-12 col-md-auto text-start mb-2 mb-md-0`}
                         onClick={() => handleCategoryClick('DM')}
                     >
                         Digital Marketing
@@ -59,17 +56,15 @@ function Blogviewed() {
                 </div>
             </div>
 
-    
             <div className='row'>
                 {filteredBlogs.map((blog, index) => (
                     <div
                         key={blog.id}
-                        className={`col-sm-12 col-lg-5 ${index % 2 === 0 ? 'offset-lg-1' : 'offset-lg-1 right-card'}`} >
+                        className={`col-sm-12 col-lg-5 ${index % 2 === 0 ? 'offset-lg-1' : 'offset-lg-1 right-card'}`}>
                         <div className='card shadowcard my-4' onClick={() => handleCardClick(blog.path)}>
-                            <img src={blog.image} alt={blog.title} className='card-img-top' />
+                            <img src={blog.image} alt={blog.title} className='card-img-top cm1' />
                             <div className='card-body'>
                                 <h5 className='card-title'><b>{blog.title}</b></h5>
-                               
                             </div>
                         </div>
                     </div>

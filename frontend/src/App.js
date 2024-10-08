@@ -54,7 +54,12 @@ import Contactformit from './IT/Contactformit/Contactformit';
 import Crmdemobook from './IT/Demobook/Crmdemobook';
 import CRMSolutions from './IT/CRMSolutions/CRMSolutions';
 import ITMenubar from './IT/ITMenubar/ITMenubar';
-
+import Sapblogview1 from './Sap/Sapblogview/Sapblogview1';
+import Dynamicblog from './Landingpage/Dynamicblog/Dynamicblog';
+import Errorpage from './Landingpage/Errorpage/Errorpage';
+import Loginpage from './Landingpage/Loginpage/Loginpage';
+import BlogDisplay from './Landingpage/BlogDisplay/BlogDisplay';
+import BlogUpdate from './Landingpage/BlogDisplay/BlogUpdate'; 
 
 function App() {
   return (
@@ -71,10 +76,16 @@ function App() {
       <Route path='/IT_Services' element={[<ITMenubar/>,<BannerIT/>,<Autopopup/>]}/>
       <Route path='/Digital_Marketing_Consultancy' element={[<Menubardm/>,<DMBanner/>,<Dmservice/>,<Adoptdm/>,<Dmblog/>,<Dmcontact/>,<Footercard/>,<Footerdm/>,<Autopopup/>]}/>
       <Route path='/Digital_Marketing_Blog' element={<Dmblogview/>}/>
-      <Route path='/Sap_blog' element={<Sapblogview/>}/>
+    <Route path='/Sap_blog' element={<Sapblogview/>}/>
     <Route path='/IT_Blog' element={[<Menubar/>,<Blogit/>,<Footercard/>,<Footer/>]}/>
     <Route path='/crm' element={[<CRM/>,<CRMSolutions/>,<Crmdemobook/>,<Techstack/>,<Contactformit/>,<Footercard/>,<Itfooter/>]}/>
     <Route path='/lms' element={[<LMS/>,<Demobook/>,<Techstack/>,<Contactformit/>,<Footercard/>,<Itfooter/>]}/>
+    <Route path='/Sap_blog1' element={<Sapblogview1/>}/>
+    <Route path='/Blog_login' element={<Loginpage/>}/>
+    <Route path="/Dynamic_blog" element={<Dynamicblog/>}/>
+    <Route path="/bl" element={<BlogDisplay/>}/>
+    <Route path='*' element={<Errorpage/>}/>
+    <Route path='/blog-update' element={<BlogUpdate/>}/>
       </Routes>      
       </BrowserRouter>
     </div>

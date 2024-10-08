@@ -8,20 +8,7 @@
     font-weight: 600;
   }
   
-  .blogheading::after {
-    content: '';
-    display: block;
-    width: 10% !important; 
-    height: 5px; 
-    background-image: linear-gradient(to right, #ED1C24, #871015); 
-    margin: 0 auto; 
-    position: absolute;
-    left: 50%; 
-    border-radius: 10px;
-    bottom: -5px; 
-    transform: translateX(-50%);
-  }
-  
+
   .colourcard{
     background-image: linear-gradient(to top,#291571,#4e28d7);
     color: #fff;

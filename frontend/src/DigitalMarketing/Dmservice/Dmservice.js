@@ -23,7 +23,7 @@ import sicon20 from "../Asset/sicon20.png";
 function Dmservice() {
     return (
         <div className='container-fluid text-center' id='DMService'>
-           <div className='row'>
+           <div className='row my-4'>
                 <p className='servepara'> In a crowded marketplace, digital marketing acts as your beacon, cutting through the noise to spotlight your brand and attract your ideal customers. By harnessing targeted strategies and real-time insights, businesses can not only reach a global audience but also drive meaningful engagement and growth.</p>
                 </div>
                 <div className='dmservepart py-3'>

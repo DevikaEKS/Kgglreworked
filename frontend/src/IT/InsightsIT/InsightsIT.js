@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./InsightsIT.css";
-import cardim1 from "../Asset/crm.webp";
+import cardim1 from "../Asset/crmblog.jpg";
 
 function InsightsIT() {
   const navigate = useNavigate();

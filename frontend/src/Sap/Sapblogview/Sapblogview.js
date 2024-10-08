@@ -1,18 +1,22 @@
 import React from 'react';
 import "./Sapblogview.css";
+import { useNavigate } from 'react-router-dom';
 import spim1 from "../Asset/sapblog.jpg";
-import spim2 from "../Asset/fiori.jpg";
+import spim2 from "../Asset/textsap.png";
 import spim3 from "../Asset/hana.jpeg";
 import Menubar from '../../Landingpage/Menubar/Menubar';
 import Footer from '../../Landingpage/Footer/Footer';
 import Footercard from '../../Landingpage/Footercard/Footercard';
 
 function Sapblogview() {
-   
+    const navigate = useNavigate(); 
+    const handleClick = () => {
+      navigate('/Sap_blog1');
+    }
     return (
         <div className='container-fluid blogpartcontent p-0 m-0'>
             <Menubar />
-            <div className='row my-3 mx-1'>
+            <div className='row my-3 mx-3'>
                 <div className='col-sm-12 col-lg-7'>
                     <h4><b> Guide for SAP ECC to S/4HANA Conversion</b>
                     </h4>
@@ -21,8 +25,7 @@ function Sapblogview() {
                     </div>
                     <p className='mt-4'>The migration from SAP ECC to SAP S/4HANA is a transformative journey for organizations looking to enhance their enterprise resource planning (ERP) systems with modern capabilities. SAP S/4HANA, built on the high-performance SAP HANA database, offers new features that improve business operations, streamline processes, and deliver real-time insights. However, transitioning from SAP ECC to S/4HANA requires thorough planning and execution. In this guide, we will walk you through the critical phases of this conversion, from preparing your systems to completing the technical migration, ensuring a smooth and efficient transformation.
                     </p>
-                    <h4>I. Getting Started: Pre-requisite Phase
-                    </h4>
+                    <h4>I. Getting Started: Pre-requisite Phase</h4>
                     <p>There are various conditions that must be met before beginning a SAP ECC to S/4HANA conversion. Technically, SAP provides a strong transition tool (called SUM) that can migrate your old databases (DB2/MSSQL/Other Providers) database to the SAP HANA database and upgrade your legacy ECC application to the newer S/4HANA code base. However, this one-jump technique is only effective if ALL of the following conditions are met:
                     </p>
                     <ol>
@@ -44,8 +47,7 @@ function Sapblogview() {
                     </p>
                     <p>You may ensure a successful conversion and take advantage of SAP S/4HANA's new features and functions by following the steps in this tutorial and taking care of the prerequisites.
                     </p>
-                    <h4>II. Assessment of Current SAP ECC Landscape
-                    </h4>
+                    <h4>II. Assessment of Current SAP ECC Landscape</h4>
                     <p>Before beginning the conversion process, a detailed review of the current SAP ECC landscape and business processes is essential. This assessment will help in identifying any gaps and areas for improvement. The following are the key activities that you need to complete during the assessment phase:
                     </p>
                     <ol>
@@ -56,11 +58,9 @@ function Sapblogview() {
                         <li>Identify the Gaps: Identify and plan for the gaps between your present SAP ECC system and SAP S/4HANA.</li>
                         <li>Prepare a Roadmap: Create a roadmap for the conversion process, including a timetable, milestones, and deliverables.
                         </li>
-                        <li> Review the SAP S/4HANA Licensing Model: The SAP S/4HANA Licensing Model and Conversions document and the SAP S/4HANA On-premise Licensing Overview document, should be reviewed thoroughly. Then, choose the licensing model that
-                        </li>
-                    </ol>
-                    <p>Best meets the needs of your organization. Both the traditional named user license and the new digital access license are feasible licensing options.
-                    </p>
+                        <li> Review the SAP S/4HANA Licensing Model: The SAP S/4HANA Licensing Model and Conversions document and the SAP S/4HANA On-premise Licensing Overview document, should be reviewed thoroughly. Then, choose the licensing model that meets the needs of your organization. Both the traditional named user license and the new digital access license are feasible licensing options.
+                     </li>
+                     </ol>
                     <h4>III. Preparation Phase</h4>
                     <p>The preparation phase involves enabling the current SAP ECC system to carry out the conversion to SAP S/4HANA. The following are the key activities that you need to complete during the preparation phase:
                     </p>
@@ -93,8 +93,7 @@ function Sapblogview() {
                         <li> Configuration and Setup: In this, the project team configures and sets up the new S/4HANA system to ensure that it meets the functional and technical requirements of the project.
                         </li>
                     </ul>
-                    <h4>V. And Finally, S/4HANA Transformation
-                    </h4>
+                    <h4>V. And Finally, S/4HANA Transformation</h4>
                     <p>And finally, here you are at the final technical set of tasks that will carry out the actual conversion from old to new. The S/4HANA transformation phase involves post-migration
                         activities such as data cleansing and optimization. The following are the key activities that you need to complete during the S/4HANA transformation phase:
                     </p>
@@ -110,17 +109,14 @@ function Sapblogview() {
 
                 <div className='col-sm-12 col-lg-4'>
 
-
                     <div>
                         <h2 className='my-4'><b>Latest Updates</b></h2>
-                        <div className='card shadowcard my-5'>
+                        <div className='card shadowcard my-5' onClick={handleClick} style={{ cursor: 'pointer' }}>
                             <img src={spim2} alt="Latest Update" className='card-img-top' />
                             <div className='card-body'>
-                                <h5 className='card-title'><b>Fiori Implementation</b></h5>
+                                <h5 className='card-title'><b>RISE with SAP, GROW with SAP, and SAP S/4HANA</b></h5>
                             </div>
                         </div>
-
-
                         <div className='card shadowcard my-5'>
                             <img src={spim1} alt="Latest Update" className='card-img-top' />
                             <div className='card-body'>

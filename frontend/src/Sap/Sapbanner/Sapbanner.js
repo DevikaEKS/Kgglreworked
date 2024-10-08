@@ -73,8 +73,6 @@ function Sapbanner() {
                 </div>
                 </div>
 
-
-
                 <div className='d-none d-md-block'>
   <div className='row'>
     <div className='col-md-6 text-start'>

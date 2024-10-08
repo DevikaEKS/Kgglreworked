@@ -2,21 +2,20 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import "./Insights.css";
 import cardim1 from "../Asset/seoi.jpeg";
-import cardim2 from "../Asset/crm.webp";
-import cardim3 from "../../Sap/Asset/hana.jpeg";
+import cardim2 from "../Asset/crmblog.jpg";
+import cardim3 from "../Asset/textsap.png";
 function Insights() {
   const navigate = useNavigate();
   const handleReadMoreClick = () => {
     navigate('/Digital_Marketing_Blog'); 
   };
   const handleReadMoreClick1 = () => {
-    navigate('/Sap_blog'); 
+    navigate('/Sap_blog1'); 
   };
   const handleReadMoreClick2 = () => {
     navigate('/IT_Blog'); 
   };
 
- 
   return (
     <div className='container-fluid' id='blogs'>
       <div className='row  my-5 pb-5 insightspart'>
@@ -25,7 +24,7 @@ function Insights() {
           <div className="card colourcard text-light my-3">
             <img src={cardim3} title='SAP' alt="Guide for  SAP ECC to S/4HANA Conversion" className="card-img-top" />
             <div className="card-body">
-              <h5 className="card-title"><b>Guide for  SAP ECC to S/4HANA Conversion</b>
+              <h5 className="card-title"><b>RISE with SAP, GROW with SAP, and SAP S/4HANA</b>
               </h5>
               <button className='readbtn rounded-3 p-2' onClick={handleReadMoreClick1}>Read More</button>
               <div className='py-3'>
