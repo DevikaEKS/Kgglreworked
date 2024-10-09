@@ -17,6 +17,7 @@ const Autopopup = () => {
     username:'',
     email: '',
     phoneNumber: '',
+    whatsappnumber:'',
     companyName: '',
     companyWebsite: '',
     description: '',
@@ -52,6 +53,10 @@ const Autopopup = () => {
     const phoneRegex = /^[0-9]{7,15}$/;
     return phoneRegex.test(phoneNumber);
   };
+  const validateWhatsappNumber = (whatsappnumber) => {
+    const phoneRegex = /^[0-9]{7,15}$/; // Adjusted to ensure the number is between 7 and 15 digits
+    return phoneRegex.test(whatsappnumber);
+  };
   const validateName = (username) => {
     const nameRegex = /^[A-Za-z\s.]{2,}$/; 
     return nameRegex.test(username);
@@ -74,6 +79,9 @@ const Autopopup = () => {
     }
     if (!formData.phoneNumber || !validatePhoneNumber(formData.phoneNumber)) {
       newErrors.phoneNumber = 'Enter valid phone number';
+    }
+    if (!formData.whatsappnumber || !validatePhoneNumber(formData.whatsappnumber)) {
+      newErrors.whatsappnumber = 'Enter Valid Phone Number';
     }
     if (!formData.companyWebsite || !validateWebsite(formData.companyWebsite)) {
       newErrors.companyWebsite = 'Enter a valid website URL.';
@@ -102,7 +110,13 @@ const Autopopup = () => {
         setErrors((prev) => ({ ...prev, email: undefined }));
       }
     }
-
+    if (name === 'whatsappnumber') {
+      if (!validateWhatsappNumber(value)) {
+        setErrors((prev) => ({ ...prev, whatsappnumber: 'Enter Valid Phone Number' }));
+      } else {
+        setErrors((prev) => ({ ...prev, whatsappnumber: undefined }));
+      }
+    }
     if (name === 'phoneNumber') {
       if (!validatePhoneNumber(value)) {
         setErrors((prev) => ({ ...prev, phoneNumber: 'Enter valid phone number' }));
@@ -126,11 +140,12 @@ const Autopopup = () => {
     if (!validateForm()) return;
 
     const fullPhoneNumber = `${selectedCountryCode}${formData.phoneNumber}`;
-
+    const fullwhatsappnumber=`${selectedCountryCode}${formData.whatsappnumber}`;
     const formValues = {
       username:formData.username,
       email: formData.email,
       phno: fullPhoneNumber,
+      whatsappnumber:fullwhatsappnumber,
       company_name: formData.companyName,
       company_site: formData.companyWebsite,
       message: formData.description,
@@ -179,7 +194,7 @@ const Autopopup = () => {
       </Modal.Header>
       <Modal.Body>
         <div className="container-fluid text-dark">
-        <form onSubmit={handleSubmit} className='bg-light rounded-3'>
+        <form onSubmit={handleSubmit} className=' rounded-3'>
               <div className='form-group m-3'>
            
                 <input type='text' className='form-control form-control1' name='username'
@@ -207,8 +222,8 @@ const Autopopup = () => {
                     id='mobilenumber'
                     className='form-control'
                     placeholder='Whatsapp number'
-                    name='phoneNumber'
-                    value={formData.phoneNumber}
+                    name='whatsappnumber'
+                    value={formData.whatsappnumber}
                     onChange={handleChange}
                     style={{ width: "70%" }}
                     required
@@ -216,7 +231,7 @@ const Autopopup = () => {
                     maxLength="15"
                   />
                 </div>
-                {errors.phoneNumber && <small className='text-danger'>{errors.phoneNumber}</small>}
+                {errors.whatsappnumber && <small className='text-danger'>{errors.whatsappnumber}</small>}
               </div>
 
 
@@ -307,20 +322,17 @@ const Autopopup = () => {
                 />
                 {errors.email && <small className='text-danger'>{errors.email}</small>}
               </div>
-
-
-
               <div className='form-group m-3'>
                 <input
                   type='text'
                   className='form-control form-control1'
-                  name='companyname'
+                  name='companyName'
                   placeholder="Company Name"
-                  value={formData.name}
+                  value={formData.companyName}
                   onChange={handleChange}
                   required
                 />
-                {errors.name && <p className='text-danger'>{errors.name}</p>}
+                {errors.name && <p className='text-danger'>{errors.companyName}</p>}
               </div>
 
               <div className='form-group m-3'>

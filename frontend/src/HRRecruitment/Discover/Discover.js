@@ -26,11 +26,12 @@ function Discover() {
     const [selectedCountryCode, setSelectedCountryCode] = useState('+91');
     const [formData, setFormData] = useState({
       username:'',
-      email: '',
-      phoneNumber: '',
-      companyName: '',
-      companyWebsite: '',
-      description: '',
+    email: '',
+    phoneNumber: '',
+    whatsappnumber:'',
+    companyName: '',
+    companyWebsite: '',
+    description: '',
     });
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
@@ -53,17 +54,21 @@ function Discover() {
       const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       return emailRegex.test(email);
     };
-  
-    const validatePhoneNumber = (phoneNumber) => {
-      const phoneRegex = /^[0-9]{7,15}$/; // Adjusted to ensure the number is between 7 and 15 digits
-      return phoneRegex.test(phoneNumber);
-    };
     const validateName = (username) => {
       const nameRegex = /^[A-Za-z\s.]{2,}$/; 
       return nameRegex.test(username);
     };
+    const validatePhoneNumber = (phoneNumber) => {
+      const phoneRegex = /^[0-9]{7,15}$/; // Adjusted to ensure the number is between 7 and 15 digits
+      return phoneRegex.test(phoneNumber);
+    };
+    const validateWhatsappNumber = (whatsappnumber) => {
+      const phoneRegex = /^[0-9]{7,15}$/; // Adjusted to ensure the number is between 7 and 15 digits
+      return phoneRegex.test(whatsappnumber);
+    };
+  
     const validateWebsite = (url) => {
-      const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/; 
+      const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/;
       return urlRegex.test(url);
     };
     const validateForm = () => {
@@ -74,33 +79,29 @@ function Discover() {
       if (!formData.email || !validateEmail(formData.email)) {
         newErrors.email = 'Invalid email address.';
       }
+      if (!formData.username || !validateName(formData.username)) {
+        newErrors.username = 'Invalid username.';
+      }
       if (!formData.phoneNumber || !validatePhoneNumber(formData.phoneNumber)) {
         newErrors.phoneNumber = 'Enter Valid Phone Number';
       }
-      if (!formData.username || !validateName(formData.username)) {
-        newErrors.username = 'Invalid username.';
+      if (!formData.whatsappnumber || !validatePhoneNumber(formData.whatsappnumber)) {
+        newErrors.whatsappnumber = 'Enter Valid Phone Number';
       }
       if (!formData.companyWebsite || !validateWebsite(formData.companyWebsite)) {
         newErrors.companyWebsite = 'Please enter a valid website URL.';
       }
-      
-      
+  
+  
       setErrors(newErrors);
       return Object.keys(newErrors).length === 0;
-  };
+    };
   
     const handleChange = (e) => {
       const { name, value } = e.target;
       setFormData({ ...formData, [name]: value });
-      
+  
       // Validate fields on change
-      if (name === 'email') {
-        if (!validateEmail(value)) {
-          setErrors((prev) => ({ ...prev, email: 'Invalid email address.' }));
-        } else {
-          setErrors((prev) => ({ ...prev, email: undefined }));
-        }
-      }
       if (name === 'username') {
         if (!validateName(value)) {
           setErrors((prev) => ({ ...prev, username: 'Invalid name' }));
@@ -108,11 +109,26 @@ function Discover() {
           setErrors((prev) => ({ ...prev, username: undefined }));
         }
       }
+      if (name === 'email') {
+        if (!validateEmail(value)) {
+          setErrors((prev) => ({ ...prev, email: 'Invalid email address' }));
+        } else {
+          setErrors((prev) => ({ ...prev, email: undefined }));
+        }
+      }
+     
       if (name === 'phoneNumber') {
         if (!validatePhoneNumber(value)) {
           setErrors((prev) => ({ ...prev, phoneNumber: 'Enter Valid Phone Number' }));
         } else {
           setErrors((prev) => ({ ...prev, phoneNumber: undefined }));
+        }
+      }
+      if (name === 'whatsappnumber') {
+        if (!validateWhatsappNumber(value)) {
+          setErrors((prev) => ({ ...prev, whatsappnumber: 'Enter Valid Phone Number' }));
+        } else {
+          setErrors((prev) => ({ ...prev, whatsappnumber: undefined }));
         }
       }
       if (name === 'companyWebsite') {
@@ -124,7 +140,7 @@ function Discover() {
       }
     };
   
-    
+  
   
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -132,36 +148,37 @@ function Discover() {
       if (!validateForm()) return;
   
       const fullPhoneNumber = `${selectedCountryCode}${formData.phoneNumber}`;
-  
+  const fullwhatsappnumber=`${selectedCountryCode}${formData.whatsappnumber}`;
       const formValues = {
         username:formData.username,
         email: formData.email,
         phno: fullPhoneNumber,
+        whatsappnumber:fullwhatsappnumber,
         company_name: formData.companyName,
         company_site: formData.companyWebsite,
         message: formData.description,
         request_type_id: requestType,
       };
-      
+  
       console.log(formValues);
   
       setLoading(true);
-      axios.post('http://kggeniuslabs.com:4000/submit-form', formValues)
-        .then(response => {
-          if (response.data.message === "Form submitted successfully") {
-            alert('Form submitted successfully!');
-            resetForm();
-          } else if (response.data.message === "Database error") {
-            alert("Value not inserted");
-          }
-        })
-        .catch(error => {
-          console.error('Error submitting form:', error);
-          alert('An error occurred. Please try again later.');
-        })
-        .finally(() => {
-          setLoading(false);
-        });
+      // axios.post('http://kggeniuslabs.com:4000/submit-form', formValues)
+      //   .then(response => {
+      //     if (response.data.message === "Form submitted successfully") {
+      //       alert('Form submitted successfully!');
+      //       resetForm();
+      //     } else if (response.data.message === "Database error") {
+      //       alert("Value not inserted");
+      //     }
+      //   })
+      //   .catch(error => {
+      //     console.error('Error submitting form:', error);
+      //     alert('An error occurred. Please try again later.');
+      //   })
+      //   .finally(() => {
+      //     setLoading(false);
+      //   });
     };
   
     const resetForm = () => {
@@ -177,7 +194,7 @@ function Discover() {
       setRequestType(""); // Reset request type
       setErrors({});
     };
-  
+   
   return (
     <div className='container-fluid bgdiscover py-3' id='hrcontact'>
       <div className='container'>
@@ -230,8 +247,8 @@ function Discover() {
                     id='mobilenumber'
                     className='form-control'
                     placeholder='Enter your whatsapp number'
-                    name='phoneNumber'
-                    value={formData.phoneNumber}
+                    name='whatsappnumber'
+                    value={formData.whatsappnumber}
                     onChange={handleChange}
                     style={{ width: "70%" }}
                     required
@@ -239,10 +256,8 @@ function Discover() {
                     maxLength="15"
                   />
                 </div>
-                {errors.phoneNumber && <small className='text-danger'>{errors.phoneNumber}</small>}
+                {errors.whatsappnumber && <small className='text-danger'>{errors.whatsappnumber}</small>}
               </div>
-
-
 
               <div className='form-group m-3'>
                 <label className='form-label'>Mobile Number</label>
@@ -263,7 +278,7 @@ function Discover() {
                     type='tel'
                     id='whatsppnumber'
                     className='form-control'
-                    placeholder='Enter your mobile number'
+                    placeholder='Enter your phone number'
                     name='phoneNumber'
                     value={formData.phoneNumber}
                     onChange={handleChange}
@@ -275,9 +290,6 @@ function Discover() {
                 </div>
                 {errors.phoneNumber && <small className='text-danger'>{errors.phoneNumber}</small>}
               </div>
-
-
-
 
               <div className="form-group m-3 position-relative">
                 <InputLabel id="request-type-label" className='contacttext'>Request Type</InputLabel>
@@ -323,6 +335,7 @@ function Discover() {
                 <input
                   type='email'
                   id='useremail'
+                  placeholder='Business email'
                   className='form-control form-control1'
                   name='email'
                   value={formData.email}
@@ -339,13 +352,13 @@ function Discover() {
                 <input
                   type='text'
                   className='form-control form-control1'
-                  name='companyname'
-                  value={formData.name}
+                  name='companyName'
+                  value={formData.companyName}
                   onChange={handleChange}
                   placeholder='Enter your company name'
                   required
                 />
-                {errors.name && <p className='text-danger'>{errors.name}</p>}
+                {errors.companyName && <p className='text-danger'>{errors.companyName}</p>}
               </div>
 
               <div className='form-group m-3'>
@@ -356,6 +369,7 @@ function Discover() {
                   className='form-control form-control1'
                   name='companyWebsite'
                   value={formData.companyWebsite}
+                  placeholder='Company website'
                   onChange={handleChange}
                   required
                 />

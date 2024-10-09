@@ -16,6 +16,7 @@ function Contactpage() {
     username:'',
     email: '',
     phoneNumber: '',
+    whatsappnumber:'',
     companyName: '',
     companyWebsite: '',
     description: '',
@@ -49,6 +50,10 @@ function Contactpage() {
     const phoneRegex = /^[0-9]{7,15}$/; // Adjusted to ensure the number is between 7 and 15 digits
     return phoneRegex.test(phoneNumber);
   };
+  const validateWhatsappNumber = (whatsappnumber) => {
+    const phoneRegex = /^[0-9]{7,15}$/; // Adjusted to ensure the number is between 7 and 15 digits
+    return phoneRegex.test(whatsappnumber);
+  };
 
   const validateWebsite = (url) => {
     const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/;
@@ -67,6 +72,9 @@ function Contactpage() {
     }
     if (!formData.phoneNumber || !validatePhoneNumber(formData.phoneNumber)) {
       newErrors.phoneNumber = 'Enter Valid Phone Number';
+    }
+    if (!formData.whatsappnumber || !validatePhoneNumber(formData.whatsappnumber)) {
+      newErrors.whatsappnumber = 'Enter Valid Phone Number';
     }
     if (!formData.companyWebsite || !validateWebsite(formData.companyWebsite)) {
       newErrors.companyWebsite = 'Please enter a valid website URL.';
@@ -104,6 +112,13 @@ function Contactpage() {
         setErrors((prev) => ({ ...prev, phoneNumber: undefined }));
       }
     }
+    if (name === 'whatsappnumber') {
+      if (!validateWhatsappNumber(value)) {
+        setErrors((prev) => ({ ...prev, whatsappnumber: 'Enter Valid Phone Number' }));
+      } else {
+        setErrors((prev) => ({ ...prev, whatsappnumber: undefined }));
+      }
+    }
     if (name === 'companyWebsite') {
       if (!validateWebsite(value)) {
         setErrors((prev) => ({ ...prev, companyWebsite: 'Enter valid URL' }));
@@ -121,11 +136,12 @@ function Contactpage() {
     if (!validateForm()) return;
 
     const fullPhoneNumber = `${selectedCountryCode}${formData.phoneNumber}`;
-
+const fullwhatsappnumber=`${selectedCountryCode}${formData.whatsappnumber}`;
     const formValues = {
       username:formData.username,
       email: formData.email,
       phno: fullPhoneNumber,
+      whatsappnumber:fullwhatsappnumber,
       company_name: formData.companyName,
       company_site: formData.companyWebsite,
       message: formData.description,
@@ -135,22 +151,22 @@ function Contactpage() {
     console.log(formValues);
 
     setLoading(true);
-    axios.post('http://kggeniuslabs.com:4000/submit-form', formValues)
-      .then(response => {
-        if (response.data.message === "Form submitted successfully") {
-          alert('Form submitted successfully!');
-          resetForm();
-        } else if (response.data.message === "Database error") {
-          alert("Value not inserted");
-        }
-      })
-      .catch(error => {
-        console.error('Error submitting form:', error);
-        alert('An error occurred. Please try again later.');
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    // axios.post('http://kggeniuslabs.com:4000/submit-form', formValues)
+    //   .then(response => {
+    //     if (response.data.message === "Form submitted successfully") {
+    //       alert('Form submitted successfully!');
+    //       resetForm();
+    //     } else if (response.data.message === "Database error") {
+    //       alert("Value not inserted");
+    //     }
+    //   })
+    //   .catch(error => {
+    //     console.error('Error submitting form:', error);
+    //     alert('An error occurred. Please try again later.');
+    //   })
+    //   .finally(() => {
+    //     setLoading(false);
+    //   });
   };
 
   const resetForm = () => {
@@ -235,8 +251,8 @@ function Contactpage() {
                     id='mobilenumber'
                     className='form-control'
                     placeholder='Enter your whatsapp number'
-                    name='phoneNumber'
-                    value={formData.phoneNumber}
+                    name='whatsappnumber'
+                    value={formData.whatsappnumber}
                     onChange={handleChange}
                     style={{ width: "70%" }}
                     required
@@ -244,10 +260,8 @@ function Contactpage() {
                     maxLength="15"
                   />
                 </div>
-                {errors.phoneNumber && <small className='text-danger'>{errors.phoneNumber}</small>}
+                {errors.whatsappnumber && <small className='text-danger'>{errors.whatsappnumber}</small>}
               </div>
-
-
 
               <div className='form-group m-3'>
                 <label className='form-label'>Mobile Number</label>
@@ -280,9 +294,6 @@ function Contactpage() {
                 </div>
                 {errors.phoneNumber && <small className='text-danger'>{errors.phoneNumber}</small>}
               </div>
-
-
-
 
               <div className="form-group m-3 position-relative">
                 <InputLabel id="request-type-label" className='contacttext'>Request Type</InputLabel>
@@ -345,13 +356,13 @@ function Contactpage() {
                 <input
                   type='text'
                   className='form-control form-control1'
-                  name='companyname'
-                  value={formData.name}
+                  name='companyName'
+                  value={formData.companyName}
                   onChange={handleChange}
                   placeholder='Enter your company name'
                   required
                 />
-                {errors.name && <p className='text-danger'>{errors.name}</p>}
+                {errors.companyName && <p className='text-danger'>{errors.companyName}</p>}
               </div>
 
               <div className='form-group m-3'>

@@ -58,8 +58,9 @@ import Sapblogview1 from './Sap/Sapblogview/Sapblogview1';
 import Dynamicblog from './Landingpage/Dynamicblog/Dynamicblog';
 import Errorpage from './Landingpage/Errorpage/Errorpage';
 import Loginpage from './Landingpage/Loginpage/Loginpage';
-import BlogDisplay from './Landingpage/BlogDisplay/BlogDisplay';
-import BlogUpdate from './Landingpage/BlogDisplay/BlogUpdate'; 
+import BlogDisplay from './Landingpage/BlogDisplay/BlogDisplay'; 
+import EditorBlog from './Landingpage/EditorBlog/EditorBlog';
+import Blogupdation from './Landingpage/Blogupdation/Blogupdation';
 
 function App() {
   return (
@@ -85,7 +86,8 @@ function App() {
     <Route path="/Dynamic_blog" element={<Dynamicblog/>}/>
     <Route path="/bl" element={<BlogDisplay/>}/>
     <Route path='*' element={<Errorpage/>}/>
-    <Route path='/blog-update' element={<BlogUpdate/>}/>
+    <Route path='/BlogEditor' element={<EditorBlog/>}/>
+<Route path='/Blogupdation' element={<Blogupdation/>}/>
       </Routes>      
       </BrowserRouter>
     </div>

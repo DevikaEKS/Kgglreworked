@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Sapbanner.css";
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink, scroller  } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import Footercard from '../../Landingpage/Footercard/Footercard';
@@ -17,8 +17,18 @@ import Footersap from '../FooterSap/Footersap';
 import Sapblog from '../Sapblog/Sapblog';
 
 function Sapbanner() {
-
   const [selectedSection, setSelectedSection] = useState('s4hana');
+  useEffect(() => {
+    if (selectedSection) {
+      setTimeout(() => {
+        scroller.scrollTo(selectedSection, {
+          smooth: true,
+          duration: 100,
+          offset: -50, // Offset to adjust scroll position
+        });
+      }); 
+    }
+  }, [selectedSection]);
 
   const handleLinkClick = (section) => {
     setSelectedSection(section);
@@ -40,78 +50,93 @@ function Sapbanner() {
 
                 <div className='d-block d-md-none fnt'>
                   <div>
-                <Link
-                    to="#"
+               
+                <ScrollLink
+                    to="s4hana"
+                    smooth={true}
+                    duration={500}
                     onClick={() => handleLinkClick('s4hana')}
                     className={`linkhover ${selectedSection === 's4hana' ? 'active-link' : ''}`}>
                     S/4HANA Implementations <FontAwesomeIcon icon={faAngleRight} />
-                  </Link>
+                  </ScrollLink>
                   </div>
                   <div>
-                  <Link
-                    to="#"
+                  <ScrollLink
+                    to="support"
+                    smooth={true}
                     onClick={() => handleLinkClick('support')}
                     className={`linkhover   ${selectedSection === 'support' ? 'active-link' : ''}`}>
                     SAP Support Services <FontAwesomeIcon icon={faAngleRight} />
-                  </Link>
+                  </ScrollLink>
                   </div>
                   <div>
-                  <Link
-                    to="#"
+                  <ScrollLink
+                    to="data"
+                    smooth={true}
                     onClick={() => handleLinkClick('data')}
                     className={`linkhover  ${selectedSection === 'data' ? 'active-link' : ''}`} >
                     Data & Analytics <FontAwesomeIcon icon={faAngleRight} />
-                  </Link>
+                  </ScrollLink>
                   </div>
                   <div>
-                  <Link
-                    to="#"
+                  <ScrollLink
+                    to="valueAdded"
+                    smooth={true}
+                    duration={100}
                     onClick={() => handleLinkClick('valueAdded')}
                     className={`linkhover ${selectedSection === 'valueAdded' ? 'active-link' : ''}`}>
                     Value Added Solutions <FontAwesomeIcon icon={faAngleRight} />
-                  </Link>
+                  </ScrollLink>
                 </div>
                 </div>
 
                 <div className='d-none d-md-block'>
   <div className='row'>
     <div className='col-md-6 text-start'>
-      <Link
-        to="#"
+      <ScrollLink
+        to="s4hana"
+        smooth={true}
+        duration={500}
         onClick={() => handleLinkClick('s4hana')}
         className={`linkhover ${selectedSection === 's4hana' ? 'active-link' : ''}`}>
         S/4HANA Implementations <FontAwesomeIcon icon={faAngleRight} />
-      </Link>
+      </ScrollLink>
     </div>
 
     <div className='col-md-6'>
-      <Link
-        to="#"
+      <ScrollLink
+        to="support"
+        smooth={true}
+        duration={100}
         onClick={() => handleLinkClick('support')}
         className={`linkhover ${selectedSection === 'support' ? 'active-link' : ''}`}>
         SAP Support Services <FontAwesomeIcon icon={faAngleRight} />
-      </Link>
+      </ScrollLink>
     </div>
   </div>
 
   <div className='row mt-3'>
 
     <div className='col-md-6 text-start'>
-      <Link
-        to="#"
+      <ScrollLink
+        to="data"
+        smooth={true}
+        duration={500}
         onClick={() => handleLinkClick('data')}
         className={`linkhover ${selectedSection === 'data' ? 'active-link' : ''}`}>
         Data & Analytics <FontAwesomeIcon icon={faAngleRight} />
-      </Link>
+      </ScrollLink>
     </div>
  
     <div className='col-md-6 '>
-      <Link
-        to="#"
+      <ScrollLink
+        to="#valueAdded"
+        smooth={true}
+        duration={500}
         onClick={() => handleLinkClick('valueAdded')}
         className={`linkhover ${selectedSection === 'valueAdded' ? 'active-link' : ''}`}>
         Value Added Solutions <FontAwesomeIcon icon={faAngleRight} />
-      </Link>
+      </ScrollLink>
     </div>
   </div>
 </div>
@@ -122,7 +147,7 @@ function Sapbanner() {
 
         <div className='content-below-banner'>
           {selectedSection === 's4hana' && (
-            <div>
+            <div id='s4hana'>
               <Sapimplementation />
               <Hanacloud />
               <Methodology />
@@ -135,8 +160,8 @@ function Sapbanner() {
             </div>
           )}
           {selectedSection === 'support' && (
-            <div>
-              <Sapsupport />
+            <div id="support">
+              <Sapsupport/>
               <Sapblog/>
               <Contactsap />
               <Footercard />
@@ -144,7 +169,7 @@ function Sapbanner() {
             </div>
           )}
           {selectedSection === 'data' && (
-            <div>
+            <div id='data'>
               <Analysis />
               <Sapblog/>
               <Contactsap />
@@ -153,7 +178,7 @@ function Sapbanner() {
             </div>
           )}
           {selectedSection === 'valueAdded' && (
-            <div>
+            <div id='valueAdded'>
               <Valueadded />
               <Sapblog/>
               <Contactsap />

@@ -21,7 +21,7 @@ function Credentials() {
 
   useEffect(() => {
     const options = {
-      threshold: 0.5, // Trigger when 50% of the item is visible
+      threshold: 0.5, 
     };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -50,8 +50,6 @@ function Credentials() {
   return (
     <div className='container text-center py-5'>
       <h1 className='evolheading my-5'><b>Credentials</b></h1>
-
-      {/* Display only on large and above devices */}
       <div className='d-none d-lg-flex justify-content-center align-items-center lappart'>
         <div className='row'>
           <div className='col-lg-4'>
@@ -76,19 +74,13 @@ function Credentials() {
             <h2>Professionals</h2>
             </div>
             <div className='card cred d-flex justify-content-center align-items-center yeartext rounded-4 mt-5' ref={refs.clients} data-key="clients">
-              <h1>
-                {visibleItems.clients && (
-                  <CountUp start={0} end={270} suffix="+" duration={2} />
-                )}
-              </h1>
-            <h1>270+</h1>
+              <h1>270+</h1>
             <h2>Clients</h2>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Display only on small to medium devices */}
       <div className='row'>
         <div className='tabscreen d-flex flex-column justify-content-center align-items-center min-vh-100 d-lg-none'>
           <div className='col-sm-12 col-md-4 my-2' ref={refs.countries} data-key="countries">

@@ -4,7 +4,10 @@
     color: #fff;
     background-repeat: no-repeat;
 }
-
+.active-link{
+    font-weight: 600;
+    color: yellow !important;
+}
 .sub-links {
     padding: 10px 0;
 }
@@ -14,10 +17,19 @@
     font-size: 20px;
     padding: 10px 20px;
 }
-  
-  .sub-links a:hover {
-    text-decoration: underline;
+
+.sub-links a:hover {
+    color: yellow; 
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
 }
+
+.sub-links a.active{
+    color: green; 
+   
+}
+
 
 .linkhover{
     text-decoration: none;
@@ -51,15 +63,13 @@
 }
 .welcome-message{
     text-align: center;
-}
-    
+}   
 }
 
 .fnt{
     font-size: 30px;
     font-weight: 300;
 }
-
 
 .active-link {
     color: #ffff00 !important;
@@ -77,18 +87,13 @@
 .headingIT{
     color: #291571;
     font-size: 40px;
-    font-weight: 600;
-    
+    font-weight: 600;  
 }
 .content-below-banner{
     color: #291571; 
 }
 .itparagraph{
     font-size: 20px;
-}
-
-.sub-links:hover{
-    color: yellow;
 }
 
 

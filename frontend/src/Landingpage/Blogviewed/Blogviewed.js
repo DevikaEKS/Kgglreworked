@@ -49,8 +49,7 @@ function Blogviewed() {
                     </Link>
                     <Link
                         className={`lnkfnt ${selectedCategory === 'DM' ? 'active' : ''} col-12 col-md-auto text-start mb-2 mb-md-0`}
-                        onClick={() => handleCategoryClick('DM')}
-                    >
+                        onClick={() => handleCategoryClick('DM')} >
                         Digital Marketing
                     </Link>
                 </div>

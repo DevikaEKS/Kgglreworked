@@ -1,14 +1,13 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import "./BlogDisplay.css";
-
 function BlogDisplay() {
   const location = useLocation();
   const navigate = useNavigate();
   const { title, category, content, conclusion, image, isAuthenticated } = location.state; // Data from previous navigation
 
   const handleUpdateClick = () => {
-    navigate('/blog-update', { state: { title, category, content, conclusion, image } });
+    navigate('/', { state: { title, category, content, conclusion, image } });
   };
 
   return (
@@ -23,7 +22,7 @@ function BlogDisplay() {
           <button className="btn btn-primary mt-3" onClick={handleUpdateClick}>
               Update
             </button>
-          {/* Conditionally render the update button if the user is authenticated */}
+         
           {isAuthenticated && (
             <button className="btn btn-primary mt-3" onClick={handleUpdateClick}>
               Update
